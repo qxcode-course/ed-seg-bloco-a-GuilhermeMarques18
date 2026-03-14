@@ -1,0 +1,36 @@
+version: '0.2'
+sources:
+- name: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  quests: null
+  tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  cache_timestamp: '2026-03-14 19:16:33'
+  quests: null
+  tasks: null
+expanded:
+- ed@análise
+- ed@pilha-e-fila
+- ed@busca-em-profundidade
+- ed@busca-em-largura
+- ed@recursão
+- ed@side-quests
+- ed@main-quest
+- ed@backtracking
+tasks:
+  ed@princesa: '{rate:100}'
+flags:
+  painel: 1
+  quests: 0
+  tracks: 1
+  tasks: 2
+  task_graph_mode: 0
+  show_time: 0
+lang: go
+selected: ed@princesa
+next_draft_id: 0

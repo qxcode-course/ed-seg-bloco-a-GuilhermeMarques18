@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-09_16-56-29",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,560 +23,46 @@\n mt%22%0A\n-%0A\n func \n-im(fila %5B%5Dint, pos int) %7B%0A%09for i := 0; i %3C len(fila); i++ %7B%0A%09%09if i == pos %7B%0A%09%09%09fmt.Print(%22%3E%22)%0A%09%09%7D%0A%09%09fmt.Print(fila%5Bi%5D)%0A%09%09if i %3C len(fila)-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()%0A%7D%0A%0Afunc main() %7B%0A%09var qtd int%0A%09var sword int%0A%0A%09fmt.Scan(&qtd, &sword)%0A%0A%09fila := make(%5B%5Dint, qtd)%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09fila%5Bi%5D = i + 1%0A%09%7D%0A%0A%09pos := sword - 1%0A%0A%09im(fila, pos)%0A%0A%09for len(fila) %3E 1 %7B%0A%09%09kill := (pos + 1) %25 len(fila)%0A%0A%09%09fila = append(fila%5B:kill%5D, fila%5Bkill+1:%5D...)%0A%0A%09%09if kill %3C pos %7B%0A%09%09%09pos--%0A%09%09%7D%0A%0A%09%09pos = (pos + 1) %25 len(fila)%0A%0A%09%09im(fila, pos)%0A%09%7D\n+main() %7B%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-14_19-28-52",
+            "content": "@@ -27,17 +27,17 @@\n %0A%0Afunc i\n-o\n+m\n (fila %5B%5D\n@@ -56,25 +56,8 @@\n ) %7B%0A\n-%09fmt.Print(%22%5B %22)%0A\n %09for\n@@ -90,29 +90,8 @@\n + %7B%0A\n-%09%09fmt.Print(fila%5Bi%5D)%0A\n %09%09if\n@@ -124,16 +124,37 @@\n %3E%22)%0A%09%09%7D%0A\n+%09%09fmt.Print(fila%5Bi%5D)%0A\n %09%09if i %3C\n@@ -210,12 +210,8 @@\n tln(\n-%22 %5D%22\n )%0A%7D%0A\n@@ -376,17 +376,17 @@\n  - 1%0A%0A%09i\n-o\n+m\n (fila, p\n@@ -411,17 +411,16 @@\n ) %3E 1 %7B%0A\n-%0A\n %09%09kill :\n@@ -558,17 +558,17 @@\n la)%0A%0A%09%09i\n-o\n+m\n (fila, p\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-14_19-31-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc io(fila []int, pos int) {\n\tfmt.Print(\"[ \")\n\tfor i := 0; i < len(fila); i++ {\n\t\tfmt.Print(fila[i])\n\t\tif i == pos {\n\t\t\tfmt.Print(\">\")\n\t\t}\n\t\tif i < len(fila)-1 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Println(\" ]\")\n}\n\nfunc main() {\n\tvar qtd int\n\tvar sword int\n\n\tfmt.Scan(&qtd, &sword)\n\n\tfila := make([]int, qtd)\n\tfor i := 0; i < qtd; i++ {\n\t\tfila[i] = i + 1\n\t}\n\n\tpos := sword - 1\n\n\tio(fila, pos)\n\n\tfor len(fila) > 1 {\n\n\t\tkill := (pos + 1) % len(fila)\n\n\t\tfila = append(fila[:kill], fila[kill+1:]...)\n\n\t\tif kill < pos {\n\t\t\tpos--\n\t\t}\n\n\t\tpos = (pos + 1) % len(fila)\n\n\t\tio(fila, pos)\n\t}\n}\n",
+            "lines": "48"
+        }
+    ]
+}
