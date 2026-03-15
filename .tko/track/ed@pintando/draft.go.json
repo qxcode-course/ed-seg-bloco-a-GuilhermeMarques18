@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_17-44-27",
+            "content": "@@ -355,10 +355,8 @@\n %25.2f\n-%5Cn\n %22, f\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-15_17-45-46",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc heron(l1 float64, l2 float64, l3 float64) float64 {\n\tp := (l1 + l2 + l3) / 2\n\n\tresult := p * (p - l1) * (p - l2) * (p - l3)\n\tarea := math.Sqrt(float64(result))\n\n\treturn area\n}\n\nfunc main() {\n\tvar l1 float64\n\tvar l2 float64\n\tvar l3 float64\n\n\tfmt.Scan(&l1, &l2, &l3)\n\n\tfinish := heron(l1, l2, l3)\n\tfmt.Printf(\"%.2f\\n\", finish)\n\n}\n",
+            "lines": "27"
+        }
+    ]
+}
