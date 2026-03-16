@@ -11,3 +11,7 @@
 2026-03-16 14:38:53, EXEC, v:1, k:ed@fuga, mode:FREE, size:33
 2026-03-16 14:39:23, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
 2026-03-16 14:39:51, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-16 14:58:27, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-16 14:58:31, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-16 15:59:38, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:39
+2026-03-16 16:00:01, SELF, v:1, k:ed@pedra, self:1, rate:100

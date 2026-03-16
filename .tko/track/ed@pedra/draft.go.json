@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_15-59-38",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\n\tm := 101\n\tresult := -1\n\n\tvar a, b int\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&a, &b)\n\n\t\tif a < 10 || b < 10 {\n\t\t\tcontinue\n\t\t}\n\n\t\tdif := int(math.Abs(float64(a - b)))\n\n\t\tif dif < m {\n\t\t\tm = dif\n\t\t\tresult = i\n\t\t}\n\t}\n\n\tif result == -1 {\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t} else {\n\t\tfmt.Println(result)\n\t}\n\n}\n",
+            "lines": "39"
+        }
+    ]
+}
