@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_16-24-56",
+            "content": "@@ -89,19 +89,20 @@\n map%5Bint%5D\n-int\n+bool\n )%0A%09casal\n@@ -165,15 +165,10 @@\n mal%5B\n--\n x%5D\n- %3E 0\n  %7B%0A%09\n@@ -183,34 +183,10 @@\n +%0A%09%09\n-%09animal%5B-x%5D--%0A%09%09%7D else %7B%0A%09\n+%7D%0A\n %09%09an\n@@ -192,22 +192,23 @@\n nimal%5Bx%5D\n-++%0A%09%09%7D\n+ = true\n %0A%09%7D%0A%09fmt\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-16_16-29-50",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar n, x int\n\tfmt.Scan(&n)\n\n\tanimal := make(map[int]int)\n\tcasal := 0\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&x)\n\n\t\tif animal[-x] > 0 {\n\t\t\tcasal++\n\t\t\tanimal[-x]--\n\t\t} else {\n\t\t\tanimal[x]++\n\t\t}\n\t}\n\tfmt.Println(casal)\n}\n",
+            "lines": "23"
+        }
+    ]
+}
