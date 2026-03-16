@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_11-10-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc filter(age int) string {\n\tif age < 12 {\n\t\treturn \"crianca\"\n\t} else if age < 18 {\n\t\treturn \"jovem\"\n\t} else if age < 65 {\n\t\treturn \"adulto\"\n\t} else if age < 1000 {\n\t\treturn \"idoso\"\n\t} else {\n\t\treturn \"mumia\"\n\t}\n\n}\nfunc main() {\n\tvar name string\n\tfmt.Scanln(&name)\n\tvar age int\n\tfmt.Scan(&age)\n\n\tfmt.Println(name, \"eh\", filter(age))\n}\n",
+            "lines": "26"
+        }
+    ]
+}
