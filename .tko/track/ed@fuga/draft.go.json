@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_14-35-14",
+            "content": "@@ -119,16 +119,11 @@\n pos \n-- 1 \n + 1\n-6\n ) %25 \n@@ -142,35 +142,40 @@\n %7B%0A%09%09%09pos = (pos \n+- 1 \n + 1\n+6\n ) %25 16%0A%09%09%7D%0A%0A%09%09if\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_14-38-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc fuga(H int, P int, F int, D int) string {\n\tpos := F\n\n\tfor {\n\t\tif D == -1 {\n\t\t\tpos = (pos - 1 + 16) % 16\n\t\t} else {\n\t\t\tpos = (pos + 1) % 16\n\t\t}\n\n\t\tif pos == P {\n\t\t\treturn \"N\"\n\t\t}\n\t\tif pos == H {\n\t\t\treturn \"S\"\n\t\t}\n\t}\n}\nfunc main() {\n\tvar H int\n\tvar P int\n\tvar F int\n\tvar D int\n\n\tfmt.Scan(&H, &P, &F, &D)\n\n\tfmt.Println(fuga(H, P, F, D))\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}
