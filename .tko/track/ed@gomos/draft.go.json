@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_14-16-27",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Ponto struct {\n\tx, y int\n}\n\nfunc main() {\n\tvar Q int\n\tvar D string\n\n\tfmt.Scan(&Q, &D)\n\n\tpy := make([]Ponto, Q)\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scan(&py[i].x, &py[i].y)\n\t}\n\n\tpyPassada := make([]Ponto, Q)\n\tcopy(pyPassada, py)\n\tswitch D {\n\tcase \"L\":\n\t\tpy[0].x--\n\tcase \"R\":\n\t\tpy[0].x++\n\tcase \"U\":\n\t\tpy[0].y--\n\tcase \"D\":\n\t\tpy[0].y++\n\t}\n\tfor i := 1; i < Q; i++ {\n\t\tpy[i] = pyPassada[i-1]\n\t}\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Printf(\"%d %d\\n\", py[i].x, py[i].y)\n\t}\n\n}\n",
+            "lines": "39"
+        }
+    ]
+}
