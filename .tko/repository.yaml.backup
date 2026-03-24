@@ -25,6 +25,7 @@ tasks:
   ed@baruel: '{self:1, rate:100, debug:1}'
   ed@gomos: '{self:1, rate:100, concept:1}'
   ed@princesa: '{self:1, rate:100, concept:1, problem:1}'
+  ed@apagando: '{self:1, rate:100}'
 flags:
   painel: 1
   quests: 0
@@ -33,5 +34,5 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@apagando
+selected: ed@manipulacao
 next_draft_id: 0
