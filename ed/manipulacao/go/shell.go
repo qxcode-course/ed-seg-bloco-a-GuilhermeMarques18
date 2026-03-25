@@ -77,7 +77,7 @@ func repeated(vet []int) []int {
 	res := []int{}
 	for _, v := range vet {
 		list[v]++
-		if list[v] == 2 {
+		if list[v] == 2 || list[v] == 3 {
 			res = append(res, v)
 		}
 	}
