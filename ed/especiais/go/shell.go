@@ -16,7 +16,6 @@ type Pair struct {
 
 func occurr(vet []int) []Pair {
 	list := make(map[int]int)
-	slice := []int{}
 	for _, v := range vet {
 		absV := v
 		if v < 0 {
@@ -25,14 +24,15 @@ func occurr(vet []int) []Pair {
 		list[absV]++
 	}
 
+	keys := make([]int, 0, len(list))
 	for k := range list {
-		slice = append(slice, k)
+		keys = append(keys, k)
 	}
-	sort.Ints(slice)
-	result := []Pair{}
+	sort.Ints(keys)
 
-	for _, v := range slice {
-		result = append(result, Pair{v, slice[v]})
+	result := []Pair{}
+	for _, k := range keys {
+		result = append(result, Pair{k, list[k]})
 	}
 	return result
 }
@@ -44,30 +44,84 @@ func teams(vet []int) []Pair {
 	slice := []Pair{}
 	count := 1
 
-	for i := 0; i < len(vet)-1; i++ {
+	for i := 0; i < len(vet); i++ {
+
 		if i == len(vet)-1 || vet[i] != vet[i+1] {
 			slice = append(slice, Pair{vet[i], count})
 			count = 1
 		} else {
 			count++
 		}
+
 	}
 	return slice
 }
 
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	slice := make([]int, len(vet))
+
+	for i := 0; i < len(vet); i++ {
+
+		if vet[i] > 0 {
+			var woman bool
+			if i > 0 && vet[i-1] < 0 {
+				woman = true
+			}
+			if i < len(vet)-1 && vet[i+1] < 0 {
+				woman = true
+			}
+			if woman {
+				slice[i] = 1
+			} else {
+				slice[i] = 0
+			}
+		} else {
+			slice[i] = 0
+		}
+	}
+	return slice
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	slice := make([]int, len(vet))
+
+	for i := 0; i < len(vet); i++ {
+
+		if vet[i] > 0 {
+			var man bool
+
+			if i > 0 && vet[i-1] < 0 {
+				man = true
+			}
+
+			if i < len(vet)-1 && vet[i+1] < 0 {
+				man = true
+			}
+
+			if !man {
+				slice[i] = 1
+			} else {
+				slice[i] = 0
+			}
+		} else {
+			slice[i] = 0
+		}
+	}
+	return slice
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	lovers := make(map[int]int)
+	var count int
+	for _, v := range vet {
+		if lovers[-v] > 0 {
+			count++
+			lovers[-v]--
+		} else {
+			lovers[v]++
+		}
+	}
+	return count
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
@@ -78,21 +132,45 @@ func hasSubseq(vet []int, seq []int, pos int) bool {
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	if len(seq) == 0 {
+		return -1
+	}
+	for i := 0; i <= len(vet)-len(seq); i++ {
+		count := true
+		for j := 0; j < len(seq); j++ {
+			if vet[i+j] != seq[j] {
+				count = false
+				break
+			}
+		}
+		if count {
+			return i
+		}
+	}
 	return -1
 }
 
-func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+func clear(vet []int, value int) []int {
+	count := []int{}
+	for _, v := range vet {
+		if v != value {
+			count = append(count, v)
+		}
+	}
+	return count
 }
 
-func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+func erase(vet []int, posList []int) []int {
+	sort.Slice(posList, func(i, j int) bool {
+		return posList[i] > posList[j]
+	})
+
+	for _, v := range posList {
+		if v >= 0 && v < len(vet) {
+			vet = append(vet[:v], vet[v+1:]...)
+		}
+	}
+	return vet
 }
 
 func main() {

@@ -1,0 +1,11 @@
+2026-03-31 16:09:51, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-31 16:09:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-03-31 16:18:47, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-31 16:27:10, SELF, v:1, k:ed@gomos, self:1, rate:100, concept:1
+2026-03-31 16:27:11, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-31 16:27:13, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-31 16:27:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-31 16:27:15, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-31 16:27:16, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-31 16:27:16, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-31 16:27:50, MOVE, v:1, k:ed@especiais, mode:PICK

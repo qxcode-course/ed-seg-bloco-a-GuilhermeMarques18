@@ -37,5 +37,5 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@busca-em-largura-bfs4-bfs-dfs
+selected: ed@busca-em-profundidade-dfs4-dfs-tree
 next_draft_id: 0
