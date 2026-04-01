@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_10-38-00",
+            "content": "@@ -396,16 +396,31 @@\n )%0A%09%09%7D%0A%09%7D\n+%0A%09fmt.Println()\n %0A%0A%7D%0A%0Afun\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-01_10-38-27",
+            "content": "@@ -344,17 +344,12 @@\n rint\n-f(%22%25d%22, i\n+ln(v\n )%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_10-39-47",
+            "content": "@@ -348,17 +348,17 @@\n f(%22%25d%22, \n-v\n+i\n )%0A%09%09if i\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_10-40-03",
+            "content": "@@ -405,23 +405,8 @@\n %7D%0A%09%7D\n-%0A%09fmt.Println()\n %0A%0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-01_10-41-04",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tstrings := make([]string, n)\n\tfor i := range strings {\n\t\tfmt.Scan(&strings[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\tconsultas := make([]string, m)\n\tfor i := range consultas {\n\t\tfmt.Scan(&consultas[i])\n\t}\n\n\tresult := matching(strings, consultas)\n\n\tfor i, v := range result {\n\t\tfmt.Printf(\"%d\", v)\n\t\tif i < len(result)-1 {\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}\n\tfmt.Println()\n\n}\n\nfunc matching(strings []string, consultas []string) []int {\n\tverification := make(map[string]int)\n\n\t//Incrementa\n\tfor _, s := range strings {\n\t\tverification[s]++\n\t}\n\n\tresult := make([]int, len(consultas))\n\n\t//Go retorona valo zero se a chave n\u00e3o existir\n\tfor i, v := range consultas {\n\t\tresult[i] = verification[v]\n\t}\n\treturn result\n}\n",
+            "lines": "48"
+        }
+    ]
+}

@@ -28,9 +28,9 @@ tasks:
   ed@princesa: '{self:1, rate:100, concept:1, problem:1}'
   ed@apagando: '{self:1, rate:100}'
   ed@manipulacao: '{self:1, rate:100}'
+  ed@especiais: '{self:1, rate:100, debug:1}'
+  ed@buscas: '{self:1, rate:100}'
   ed@analise: '{}'
-  ed@especiais: '{}'
-  ed@buscas: '{}'
   ed@rotacoes: '{}'
   ed@alternando: '{}'
   ed@crec_view: '{}'
@@ -117,4 +117,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@especiais
+selected: ed@rotacoes

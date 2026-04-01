@@ -17,3 +17,16 @@
 2026-04-01 09:10:36, EXEC, v:1, k:ed@especiais, mode:FULL, rate:87, size:243
 2026-04-01 09:11:33, EXEC, v:1, k:ed@especiais, mode:FULL, rate:100, size:242
 2026-04-01 09:11:59, SELF, v:1, k:ed@especiais, self:1, rate:100, debug:1
+2026-04-01 09:14:06, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-01 10:14:29, MOVE, v:1, k:ed@buscas, mode:DOWN
+2026-04-01 10:37:58, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-01 10:38:00, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:48
+2026-04-01 10:38:01, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-04-01 10:38:27, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:47
+2026-04-01 10:39:47, EXEC, v:1, k:ed@buscas, mode:FULL, size:47, fail:COMP
+2026-04-01 10:39:48, EXEC, v:1, k:ed@buscas, mode:FULL, fail:COMP
+2026-04-01 10:40:03, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:47
+2026-04-01 10:40:18, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-04-01 10:41:04, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:48
+2026-04-01 10:41:10, SELF, v:1, k:ed@buscas, self:1, rate:100
+2026-04-01 10:41:22, MOVE, v:1, k:ed@buscas, mode:BACK
