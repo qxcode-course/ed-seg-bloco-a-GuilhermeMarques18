@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_11-25-34",
+            "content": "@@ -185,94 +185,16 @@\n rint\n-f(%22%5B%22)%0A%09for i, v := range slice %7B%0A%09%09fmt.Print(v)%0A%09%09fmt.Printf(%22 %22)%0A%09%7D%0A%09fmt.Println(%22%5D%22\n+ln(slice\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-01_11-28-33",
+            "content": "@@ -197,9 +197,9 @@\n for \n-_\n+i\n , v \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-01_11-28-48",
+            "content": "@@ -185,17 +185,16 @@\n rintf(%22%5B\n- \n %22)%0A%09for \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-01_11-29-02",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, m int\n\tfmt.Scan(&n, &m)\n\n\tvetor := make([]int, n)\n\tfor i := range vetor {\n\t\tfmt.Scan(&vetor[i])\n\t}\n\n\tslice := inverte(m, vetor)\n\tfmt.Printf(\"[ \")\n\tfor _, v := range slice {\n\t\tfmt.Print(v)\n\t\tfmt.Printf(\" \")\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc inverte(m int, vetor []int) []int {\n\n\tinverso := make([]int, len(vetor))\n\n\tfor i := range vetor {\n\t\tresult := (i + m) % len(vetor)\n\t\tinverso[result] = vetor[i]\n\t}\n\n\treturn inverso\n}\n",
+            "lines": "33"
+        }
+    ]
+}
