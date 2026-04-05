@@ -1,0 +1,14 @@
+2026-04-05 13:08:26, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-04-05 13:09:57, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-04-05 13:09:58, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-04-05 13:10:02, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-04-05 13:10:58, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-04-05 14:28:39, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:58
+2026-04-05 14:29:16, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:58
+2026-04-05 14:33:49, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:59
+2026-04-05 14:35:59, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:57
+2026-04-05 14:38:36, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:63
+2026-04-05 14:41:13, EXEC, v:1, k:ed@alternando, mode:FULL, rate:100, size:66
+2026-04-05 14:42:12, SELF, v:1, k:ed@alternando, self:1, rate:100, concept:1
+2026-04-05 14:42:15, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-04-05 14:43:59, MOVE, v:1, k:ed@fractais_png, mode:DOWN

@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2026-04-01_11-32-01",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -37,757 +37,39 @@\n ) %7B%0A\n-%09var num, sword, signal int%0A%09fmt.Scan(&num, &sword, &signal)%0A%09wheel := make(%5B%5Dint, num)%0A%0A%09inversion := signal%0A%09for i := 0; i %3C num; i++ %7B%0A%09%09wheel%5Bi%5D = (i + 1) * inversion%0A%09%09inversion *= -1%0A%09%7D%0A%0A%09pos := 0%0A%09for i, v := range wheel %7B%0A%09%09if v == sword %7C%7C v == -sword %7B%0A%09%09%09pos = i%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09for len(wheel) %3E 1 %7B%0A%09%09kill := 0%0A%09%09if wheel%5Bpos%5D %3E 0 %7B%0A%09%09%09kill = (pos + 1) %25 len(wheel)%0A%09%09%7D else %7B%0A%09%09%09kill = (pos - 1 + len(wheel)) %25 len(wheel)%0A%09%09%7D%0A%09%09killed := kill %3C pos%0A%09%09wheel = append(wheel%5B:kill%5D, wheel%5Bkill+1:%5D...)%0A%0A%09%09if killed %7B%0A%09%09%09pos--%0A%09%09%7D%0A%0A%09%7D%0A%0A%09fmt.Print(%22%5B %22)%0A%0A%09for i, v := range wheel %7B%0A%09%09if i == pos %7B%0A%09%09%09if v %3E 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E%22, v)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%3C%25d%22, v)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(%22%5D%22)%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-04-05_14-28-39",
+            "content": "@@ -681,17 +681,16 @@\n ntf(%22%25d%3E\n- \n %22, v)%0A%09%09\n@@ -718,17 +718,16 @@\n ntf(%22%3C%25d\n- \n %22, v)%0A%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-05_14-29-16",
+            "content": "@@ -357,25 +357,8 @@\n 1 %7B%0A\n-%09%09io(wheel, pos)%0A\n %09%09ki\n@@ -590,39 +590,8 @@\n %0A%09%7D%0A\n-%7D%0Afunc io(vet %5B%5Dint, pos int) %7B\n %0A%09fm\n@@ -628,11 +628,13 @@\n nge \n-vet\n+wheel\n  %7B%0A%09\n@@ -792,10 +792,11 @@\n ln(%22%5D%22)%0A\n+%0A\n %7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-05_14-33-49",
+            "content": "@@ -386,108 +386,8 @@\n = 0%0A\n-%09%09killed := kill %3C pos%0A%09%09wheel = append(wheel%5B:kill%5D, wheel%5Bkill+1:%5D...)%0A%09%09if killed %7B%0A%09%09%09pos--%0A%09%09%7D%0A\n %09%09if\n@@ -498,16 +498,118 @@\n el)%0A%09%09%7D%0A\n+%09%09killed := kill %3C pos%0A%09%09wheel = append(wheel%5B:kill%5D, wheel%5Bkill+1:%5D...)%0A%0A%09%09if killed %7B%0A%09%09%09pos--%0A%09%09%7D%0A%0A\n %09%7D%0A%7D%0Afun\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-05_14-35-59",
+            "content": "@@ -386,124 +386,8 @@\n = 0%0A\n-%09%09if wheel%5Bpos%5D %3E 0 %7B%0A%09%09%09kill = (pos + 1) %25 len(wheel)%0A%09%09%7D else %7B%0A%09%09%09kill = (pos - 1 + len(wheel)) %25 len(wheel)%0A%09%09%7D%0A\n %09%09ki\n@@ -601,32 +601,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09io(wheel, pos)%0A\n %7D%0Afunc i\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-05_14-38-36",
+            "content": "@@ -498,17 +498,16 @@\n el)%0A%09%09%7D%0A\n-%0A\n %09%09killed\n@@ -571,17 +571,16 @@\n 1:%5D...)%0A\n-%0A\n %09%09if kil\n@@ -598,17 +598,16 @@\n s--%0A%09%09%7D%0A\n-%0A\n %09%09if whe\n@@ -627,18 +627,24 @@\n %0A%09%09%09\n-pos = kill\n+kill = (pos + 1)\n  %25 l\n@@ -671,19 +671,19 @@\n %0A%09%09%09\n-pos = (kill\n+kill = (pos\n  - 1\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-05_14-41-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar num, sword, signal int\n\tfmt.Scan(&num, &sword, &signal)\n\twheel := make([]int, num)\n\n\tinversion := signal\n\tfor i := 0; i < num; i++ {\n\t\twheel[i] = (i + 1) * inversion\n\t\tinversion *= -1\n\t}\n\n\tpos := 0\n\tfor i, v := range wheel {\n\t\tif v == sword || v == -sword {\n\t\t\tpos = i\n\t\t\tbreak\n\t\t}\n\t}\n\n\tfor len(wheel) > 1 {\n\t\tio(wheel, pos)\n\t\tkill := 0\n\t\tif wheel[pos] > 0 {\n\t\t\tkill = (pos + 1) % len(wheel)\n\t\t} else {\n\t\t\tkill = (pos - 1 + len(wheel)) % len(wheel)\n\t\t}\n\n\t\tkilled := kill < pos\n\t\twheel = append(wheel[:kill], wheel[kill+1:]...)\n\n\t\tif killed {\n\t\t\tpos--\n\t\t}\n\n\t\tif wheel[pos] > 0 {\n\t\t\tpos = kill % len(wheel)\n\t\t} else {\n\t\t\tpos = (kill - 1 + len(wheel)) % len(wheel)\n\t\t}\n\t}\n\tio(wheel, pos)\n}\nfunc io(vet []int, pos int) {\n\tfmt.Print(\"[ \")\n\n\tfor i, v := range vet {\n\t\tif i == pos {\n\t\t\tif v > 0 {\n\t\t\t\tfmt.Printf(\"%d> \", v)\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"<%d \", v)\n\t\t\t}\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", v)\n\t\t}\n\t}\n\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "66"
         }
     ]
 }
