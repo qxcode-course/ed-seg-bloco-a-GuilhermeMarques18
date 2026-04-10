@@ -1,0 +1,11 @@
+2026-04-07 15:51:48, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 15:52:51, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 15:52:59, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-07 16:14:05, MOVE, v:1, k:ed@triangulo, mode:BACK
+2026-04-07 16:14:10, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 16:14:15, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:154
+2026-04-07 16:14:22, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 16:14:25, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 17:27:37, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-07 17:27:46, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 17:56:56, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:173
