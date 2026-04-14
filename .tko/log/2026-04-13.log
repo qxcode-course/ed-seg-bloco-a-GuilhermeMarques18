@@ -1,0 +1,33 @@
+2026-04-13 15:51:36, MOVE, v:1, k:eval1@baruel, mode:DOWN
+2026-04-13 15:51:36, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-13 16:03:15, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-13 16:03:17, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:46
+2026-04-13 16:03:17, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:46
+2026-04-13 16:06:54, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:46
+2026-04-13 16:08:07, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:46
+2026-04-13 16:14:06, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:14:18, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:14:44, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:18:25, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:20:18, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:24:34, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:24:41, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-13 16:24:55, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-13 16:25:55, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-13 16:28:21, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:28:28, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25
+2026-04-13 16:28:34, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25
+2026-04-13 16:29:02, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:29:27, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:44
+2026-04-13 16:29:54, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:30:28, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:30:47, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:31:10, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:31:15, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:32:23, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:34:19, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:36:59, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:44
+2026-04-13 16:37:26, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100, size:44
+2026-04-13 16:39:43, SELF, v:1, k:eval1@baruel, self:1, rate:100
+2026-04-13 16:39:47, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-13 16:40:02, MOVE, v:1, k:eval1@apagando, mode:DOWN

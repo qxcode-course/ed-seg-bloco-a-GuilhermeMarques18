@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_16-06-54",
+            "content": "@@ -489,19 +489,24 @@\n  faltar \n+%5B%5Dstr\n in\n-t\n+g\n %0A%09for i \n@@ -550,18 +550,50 @@\n %09%09faltar\n-++\n+ = append(faltar, strconv.Itoa(i))\n %0A%09%09%7D%0A%09%7D%0A\n@@ -597,22 +597,27 @@\n %09%7D%0A%0A%09if \n+len(\n faltar\n+)\n  == 0 %7B%0A\n@@ -659,21 +659,39 @@\n Println(\n-faltar\n+strings.Join(reper, %22 %22)\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_16-08-07",
+            "content": "@@ -476,16 +476,17 @@\n  %22))%0A%09%7D%0A\n+%0A\n %09var fal\n@@ -499,32 +499,33 @@\n t%0A%09for i := \n-0\n+1\n ; i %3C\n- b\n+= a\n ; i++ %7B%0A%09%09if\n@@ -529,25 +529,16 @@\n %09if \n-figurinha%5Bi%5D != i\n+!cont%5Bi%5D\n  %7B%0A%09\n@@ -555,16 +555,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09if falt\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-13_16-14-06",
+            "content": "@@ -536,17 +536,17 @@\n inha%5Bi%5D \n-=\n+!\n = i %7B%0A%09%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-14-18",
+            "content": "@@ -540,9 +540,9 @@\n %5Bi%5D \n-!\n+=\n = i \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-14-44",
+            "content": "@@ -127,17 +127,16 @@\n , b)%0A%09co\n-u\n nt := ma\n@@ -209,17 +209,16 @@\n i%5D)%0A%09%09co\n-u\n nt%5Bfigur\n@@ -481,28 +481,22 @@\n %09%7D%0A%09\n+var \n faltar \n-:= %5B%5Dstring%7B%7D\n+int\n %0A%09fo\n@@ -527,63 +527,39 @@\n %09if \n-!count%5Bi%5D %7B%0A%09%09%09faltar = append(faltar, strconv.Itoa(i))\n+figurinha%5Bi%5D != i %7B%0A%09%09%09faltar++\n %0A%09%09%7D\n@@ -570,19 +570,14 @@\n %09if \n-len(\n faltar\n-)\n  == \n@@ -627,33 +627,14 @@\n tln(\n-strings.Join(faltar, %22 %22)\n+faltar\n )%0A%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-18-25",
+            "content": "@@ -483,22 +483,28 @@\n %09%7D%0A%09\n-var \n faltar \n-int\n+:= %5B%5Dstring%7B%7D\n %0A%09fo\n@@ -552,18 +552,50 @@\n %09%09faltar\n-++\n+ = append(faltar, strconv.Itoa(i))\n %0A%09%09%7D%0A%09%7D%0A\n@@ -598,22 +598,27 @@\n %0A%09%7D%0A%09if \n+len(\n faltar\n+)\n  == 0 %7B%0A\n@@ -660,21 +660,40 @@\n Println(\n-faltar\n+strings.Join(faltar, %22 %22)\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-20-18",
+            "content": "@@ -496,33 +496,33 @@\n r int%0A%09for i := \n-1\n+0\n ; i %3C b; i++ %7B%0A%09\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-24-34",
+            "content": "@@ -510,19 +510,18 @@\n = 1; i %3C\n-= a\n+ b\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-28-20",
+            "content": "@@ -500,25 +500,25 @@\n t%0A%09for i := \n-0\n+1\n ; i %3C= a; i+\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-29-02",
+            "content": "@@ -512,17 +512,17 @@\n 0; i %3C= \n-b\n+a\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-29-27",
+            "content": "@@ -500,25 +500,25 @@\n t%0A%09for i := \n-1\n+0\n ; i %3C= b; i+\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-29-54",
+            "content": "@@ -512,17 +512,17 @@\n 1; i %3C= \n-a\n+b\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-30-28",
+            "content": "@@ -512,17 +512,17 @@\n 1; i %3C= \n-b\n+a\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-30-47",
+            "content": "@@ -483,19 +483,22 @@\n %09%7D%0A%09\n+var \n faltar \n-:= 0\n+int\n %0A%09fo\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-31-10",
+            "content": "@@ -509,17 +509,17 @@\n 1; i %3C= \n-a\n+b\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-31-15",
+            "content": "@@ -509,17 +509,17 @@\n 1; i %3C= \n-b\n+a\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-32-23",
+            "content": "@@ -509,17 +509,17 @@\n 1; i %3C= \n-a\n+b\n ; i++ %7B%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-34-19",
+            "content": "@@ -493,18 +493,9 @@\n  := \n-%5B%5Dstring%7B%7D\n+0\n %0A%09fo\n@@ -548,42 +548,10 @@\n ltar\n- = append(faltar, strconv.Itoa(i))\n+++\n %0A%09%09%7D\n@@ -562,19 +562,14 @@\n %09if \n-len(\n faltar\n-)\n  == \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-36-59",
+            "content": "@@ -665,33 +665,14 @@\n tln(\n-strings.Join(faltar, %22 %22)\n+faltar\n )%0A%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-13_16-37-26",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\n\tfigurinha := make([]int, b)\n\tcount := make(map[int]bool)\n\n\tfor i := 0; i < b; i++ {\n\t\tfmt.Scan(&figurinha[i])\n\t\tcount[figurinha[i]] = true\n\t}\n\n\tvar reper []string\n\tfor i := 1; i < b; i++ {\n\t\tif figurinha[i] == figurinha[i-1] {\n\t\t\treper = append(reper, strconv.Itoa(figurinha[i]))\n\t\t}\n\t}\n\n\tif len(reper) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(strings.Join(reper, \" \"))\n\t}\n\tfaltar := []string{}\n\tfor i := 1; i <= a; i++ {\n\t\tif !count[i] {\n\t\t\tfaltar = append(faltar, strconv.Itoa(i))\n\t\t}\n\t}\n\tif len(faltar) == 0 {\n\t\tfmt.Println(\"N\")\n\t} else {\n\t\tfmt.Println(strings.Join(faltar, \" \"))\n\t}\n}\n",
+            "lines": "44"
+        }
+    ]
+}

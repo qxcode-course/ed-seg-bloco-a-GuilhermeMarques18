@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-53-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tvar person int\n\tlist := make(map[int]int)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&person)\n\n\t\tlist[i] = person\n\t}\n\n\tvar m, sair int\n\tfmt.Scan(&m)\n\n\texit := make(map[int]bool)\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&sair)\n\n\t\texit[sair] = true\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tv, ok := list[i]\n\t\tif ok && !exit[v] {\n\t\t\tfmt.Printf(\"%d \", v)\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "35"
+        }
+    ]
+}
