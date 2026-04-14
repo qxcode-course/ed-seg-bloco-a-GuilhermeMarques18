@@ -22,7 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@teste-1
+- ed@rec
 flags:
   inbox: inbox
   panel: help
@@ -30,4 +30,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@apagando
+selected: ed@treinando

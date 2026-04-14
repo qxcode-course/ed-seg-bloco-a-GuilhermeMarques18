@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-23-40",
+            "content": "@@ -104,17 +104,16 @@\n n(vet) %3C\n-=\n  1 %7B%0A%09%09r\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-24-21",
+            "content": "@@ -103,17 +103,17 @@\n en(vet) \n-=\n+%3C\n = 1 %7B%0A%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-24-44",
+            "content": "@@ -103,17 +103,18 @@\n en(vet) \n-%3C\n+==\n  1 %7B%0A%09%09r\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-24-59",
+            "content": "@@ -251,17 +251,16 @@\n slice) %3E\n-=\n  1 %7B%0A%09%09p\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-25-17",
+            "content": "@@ -235,17 +235,39 @@\n oma)%0A%09%7D%0A\n-%0A\n+%09if len(slice) %3E= 1 %7B%0A%09\n %09process\n@@ -275,16 +275,18 @@\n (slice)%0A\n+%09%7D\n %0A%09fmt.Pr\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-25-27",
+            "content": "@@ -236,59 +236,8 @@\n ma)%0A\n-%09%09string := Join(slice, %22 %22)%0A%09%09fmt.Println(string)%0A\n %09%7D%0A%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-26-22",
+            "content": "@@ -232,16 +232,67 @@\n , soma)%0A\n+%09%09string := Join(slice, %22 %22)%0A%09%09fmt.Println(string)%0A\n %09%7D%0A%0A%09pro\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-04-14_14-26-45",
+            "content": "@@ -268,119 +268,14 @@\n rint\n-(%22%5B %22)%0A%09for i, v := range vet %7B%0A%09%09fmt.Print(v)%0A%09%09if i %3C len(vet)-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22 %5D%22\n+ln(vet\n )%0A%09/\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-14_14-28-17",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc processa(vet []int) {\n\tif len(vet) < 1 {\n\t\treturn\n\t}\n\tslice := []int{}\n\tfor i := 0; i < len(vet)-1; i++ {\n\t\tsoma := vet[i] + vet[i+1]\n\t\tslice = append(slice, soma)\n\t}\n\n\tprocessa(slice)\n\n\tfmt.Print(\"[ \")\n\tfor i, v := range vet {\n\t\tfmt.Print(v)\n\t\tif i < len(vet)-1 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Println(\" ]\")\n\t// 1. defina o ponto de parada\n\t// 2. monte o vetor auxiliar com os resultados das somas\n\t// 3. chame recursivamente a fun\u00e7\u00e3o processa para o vetor auxiliar\n\t// 4. imprima o vetor original\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n",
+            "lines": "65"
+        }
+    ]
+}
