@@ -3,3 +3,7 @@
 2026-04-22 00:03:15, MOVE, v:1, k:ed@treinando, mode:BACK
 2026-04-22 00:03:32, MOVE, v:1, k:ed@resto, mode:DOWN
 2026-04-22 00:03:39, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-22 00:20:05, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:20
+2026-04-22 00:20:06, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-22 00:20:15, SELF, v:1, k:ed@resto, self:1, rate:100
+2026-04-22 00:20:18, MOVE, v:1, k:ed@resto, mode:BACK
