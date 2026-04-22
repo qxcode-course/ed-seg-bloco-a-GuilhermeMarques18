@@ -42,14 +42,18 @@ func reverse(vet []int, i, j int) {
 
 // sum: soma dos elementos do slice
 func sum(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 0
+	}
+	return vet[0] + sum(vet[1:])
 }
 
 // mult: produto dos elementos do slice
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return 1
+	}
+	return vet[0] * mult(vet[1:])
 }
 
 // min: retorna o índice e valor do menor valor
@@ -57,8 +61,24 @@ func mult(vet []int) int {
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
 func min(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return -1
+	}
+	var rec func(i int) (int, int)
+
+	rec = func(i int) (int, int) {
+		if i == len(vet)-1 {
+			return i, vet[i]
+		}
+		menor, resto := rec(i + 1)
+
+		if vet[i] < resto {
+			return i, vet[i]
+		}
+		return menor, resto
+	}
+	idx, _ := rec(0)
+	return idx
 }
 
 func main() {

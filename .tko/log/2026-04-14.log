@@ -43,3 +43,11 @@
 2026-04-14 16:36:50, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:101
 2026-04-14 16:37:55, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:101
 2026-04-14 16:40:31, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:101
+2026-04-14 16:53:23, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-14 16:53:30, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-14 16:53:31, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-14 16:55:16, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-14 16:55:18, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50
+2026-04-14 17:00:59, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:103
+2026-04-14 17:01:00, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50
+2026-04-14 20:06:12, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50

@@ -22,7 +22,16 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@tree
+- ed@backtrack
+- ed@linear
+- ed@dfs
+- ed@bfs
+- ed@map_set
+- ed@vector
+- ed@list
 - ed@rec
+- ed@sandbox
 flags:
   inbox: inbox
   panel: help
@@ -30,4 +39,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@treinando
+selected: ed@resto
