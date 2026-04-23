@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-22_23-49-52",
+            "content": "@@ -138,20 +138,22 @@\n  %7B%0A%09\n-if x %3C 2 %7B%0A%09\n+_, _ = x, div%0A\n %09ret\n@@ -165,50 +165,9 @@\n alse\n-%0A%09%7D%0A%0A%09result := x%25div == 0%0A%09return result%0A\n+;\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-22_23-58-01",
+            "content": "@@ -179,42 +179,18 @@\n  := \n-eh_primo(x, div+1) && (\n x%25div \n-!\n+=\n = 0\n-)\n %0A%09re\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-22_23-58-51",
+            "content": "@@ -190,16 +190,18 @@\n o(x, div\n++1\n ) && (x%25\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-22_23-59-13",
+            "content": "@@ -191,16 +191,32 @@\n (x, div)\n+ && (x%25div != 0)\n %0A%09return\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-22_23-59-29",
+            "content": "@@ -179,74 +179,40 @@\n  := \n-x%25div == 0%0A%09if result %7C%7C div != x %7B%0A%09%09return false%0A%09%7D%0A%09return true\n+eh_primo(x, div)%0A%09return result%0A\n %0A%7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-23_00-03-10",
+            "content": "@@ -166,63 +166,8 @@\n e%0A%09%7D\n-%0A%09if div*div %3E x %7B%0A%09%09return true%0A%09%7D%0A%09eh_primo(x, div+1)\n %0A%0A%09r\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-23_00-07-35",
+            "content": "@@ -252,16 +252,28 @@\n  result \n+%7C%7C div != x \n %7B%0A%09%09retu\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-23_00-08-20",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\teh_primo(x, div+1)\n\n\tresult := x%div == 0\n\tif result {\n\t\treturn false\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tif eh_primo(x, 2) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "31"
+        }
+    ]
+}

@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@linear
-- ed@backtrack
-- ed@bfs
 - ed@dfs
+- ed@bfs
 - ed@tree
-- ed@list
+- ed@backtrack
 - ed@rec
+- ed@list
+- ed@linear
 flags:
   inbox: inbox
   panel: help
@@ -36,4 +36,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@labirinto
+selected: ed@eh_primo
