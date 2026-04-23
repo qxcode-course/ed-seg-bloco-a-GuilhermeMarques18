@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-22_00-20-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc div(n int) {\n\tif n == 0 {\n\t\treturn\n\t}\n\tdiv(n / 2)\n\n\tresto := n % 2\n\tresult := n / 2\n\tfmt.Println(result, resto)\n\n}\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tdiv(n)\n}\n",
+            "lines": "20"
+        }
+    ]
+}
