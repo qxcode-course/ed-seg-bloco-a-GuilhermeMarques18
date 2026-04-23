@@ -16,8 +16,15 @@ func burnTrees(grid [][]rune, l, c int) {
 	if grid[l][c] != '#' {
 		return
 	}
+
+	grid[l][c] = 'o'
+
 	// queime a arvore colocando o caractere 'o' na posição atual
 	// chame a recursão para todos os 4 vizinhos
+	burnTrees(grid, l-1, c)
+	burnTrees(grid, l+1, c)
+	burnTrees(grid, l, c-1)
+	burnTrees(grid, l, c+1)
 }
 
 func main() {
