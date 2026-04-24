@@ -16,3 +16,25 @@
 2026-04-23 00:21:04, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:52
 2026-04-23 00:21:07, SELF, v:1, k:ed@vetequals, self:1, rate:100
 2026-04-23 00:21:09, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-23 00:22:38, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-23 00:23:24, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-23 07:51:08, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-23 07:51:10, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:66
+2026-04-23 20:46:51, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-23 20:46:53, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 20:46:54, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 20:46:54, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 22:23:46, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 22:23:47, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 22:23:48, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-23 22:23:52, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-23 22:23:53, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-04-23 23:38:43, EXEC, v:1, k:ed@labirinto, mode:FULL, size:68, fail:COMP
+2026-04-23 23:38:44, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-04-23 23:40:44, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:72
+2026-04-23 23:42:13, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:85
+2026-04-23 23:43:28, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:86
+2026-04-23 23:45:55, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:86
+2026-04-23 23:46:17, SELF, v:1, k:ed@labirinto, self:1, rate:100, problem:1
+2026-04-23 23:46:19, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-04-23 23:46:20, MOVE, v:1, k:ed@labirinto, mode:BACK

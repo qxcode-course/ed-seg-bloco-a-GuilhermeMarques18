@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@dfs
 - ed@bfs
-- ed@tree
 - ed@backtrack
-- ed@rec
+- ed@tree
 - ed@list
+- ed@rec
 - ed@linear
+- ed@dfs
 flags:
   inbox: inbox
   panel: help
@@ -36,4 +36,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetequals
+selected: ed@map_set
