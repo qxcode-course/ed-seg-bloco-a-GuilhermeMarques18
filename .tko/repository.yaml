@@ -25,15 +25,15 @@ expanded:
 - ed@bfs
 - ed@backtrack
 - ed@tree
+- ed@basic
 - ed@list
-- ed@rec
 - ed@linear
 - ed@dfs
 flags:
   inbox: inbox
-  panel: help
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@map_set
+selected: ed@basic
