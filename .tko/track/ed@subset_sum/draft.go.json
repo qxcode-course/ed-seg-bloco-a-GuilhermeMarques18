@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_16-06-42",
+            "content": "@@ -30,42 +30,118 @@\n unc \n-subsetSum(arr %5B%5Dint, k int) bool %7B\n+main() %7B%0A%09var n, k int%0A%09fmt.Scan(&n, &k)%0A%0A%09arr := make(%5B%5Dint, n)%0A%09for i := range arr %7B%0A%09%09fmt.Scan(&arr%5Bi%5D)%0A%09%7D%0A\n %0A%09fo\n@@ -154,24 +154,17 @@\n  0; i %3C \n-len(arr)\n+n\n ; i++ %7B%0A\n@@ -189,16 +189,9 @@\n j %3C \n-len(arr)\n+n\n ; j+\n@@ -229,181 +229,37 @@\n %09%09%09%09\n-return true%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D%0Afunc main() %7B%0A%09var n, k int%0A%09fmt.Scan(&n, &k)%0A%0A%09arr := make(%5B%5Dint, n)%0A%09for i := range arr %7B%0A%09%09fmt.Scan(&arr%5Bi%5D)%0A%09%7D%0A%0A%09subsetSum(arr, k)\n+fmt.Println(i, j)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-28_16-10-37",
+            "content": "@@ -320,19 +320,16 @@\n %5D)%0A%09%7D%0A%0A%09\n-if \n subsetSu\n@@ -341,63 +341,7 @@\n , k)\n- %7B%0A%09%09fmt.Println(%22YES%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22NO%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-28_16-12-08",
+            "content": "@@ -174,12 +174,11 @@\n urn \n-fals\n+tru\n e%0A%09%09\n@@ -195,19 +195,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0Afunc\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-28_16-13-23",
+            "content": "@@ -174,11 +174,12 @@\n urn \n-tru\n+fals\n e%0A%09%09\n@@ -188,16 +188,29 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09return true%0A\n %7D%0Afunc m\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-28_16-13-49",
+            "content": "@@ -191,22 +191,8 @@\n %0A%09%7D%0A\n-%09return false%0A\n %7D%0Afu\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-28_16-14-15",
+            "content": "@@ -66,137 +66,129 @@\n  %7B%0A%09\n-result := make(map%5Bint%5Dbool)%0A%09for _, v := range arr %7B%0A%09%09dif := k - v%0A%09%09if dif %3E= 0\n+for i := 0; i %3C len(arr); i++ %7B%0A%09%09for j := i + 1; j %3C len(arr); j++ %7B%0A%09%09%09if arr%5Bi%5D+arr%5Bj%5D == k\n  %7B%0A%09%09%09\n+%09\n re\n-sult%5Bdif%5D =\n+turn\n  true%0A\n+%09\n %09%09%7D%0A%09%09\n-result%5Bv%5D = true\n+%7D\n %0A%09%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-28_16-20-40",
+            "content": "@@ -122,34 +122,53 @@\n %7B%0A%09%09\n+d\n if \n-result%5Bk-v%5D %7B%0A%09%09%09return\n+:= k - v%0A%09%09if dif %3E= 0 %7B%0A%09%09%09result%5Bdif%5D =\n  tru\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-28_16-22-10",
+            "content": "@@ -221,26 +221,16 @@\n  k int%0A%09\n-_, err := \n fmt.Scan\n@@ -243,42 +243,8 @@\n k)%0A%0A\n-%09if err != nil %7B%0A%09%09panic(err)%0A%09%7D%0A%0A\n %09arr\n@@ -290,18 +290,8 @@\n %7B%0A%09%09\n-_, err := \n fmt.\n@@ -308,40 +308,8 @@\n i%5D)%0A\n-%09%09if err != nil %7B%0A%09%09%09return%0A%09%09%7D%0A\n %09%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-28_16-25-30",
+            "content": "@@ -40,84 +40,108 @@\n Sum(\n-idx int, current int, target int, arr %5B%5Dint) \n+arr %5B%5Dint, k int) bool %7B%0A%09result := make(map%5Bint%5D\n bool\n- %7B%0A%09if current == target\n+)%0A%09for _, v := range arr %7B%0A%09%09if result%5Bk-v%5D\n  %7B%0A\n+%09\n %09%09re\n@@ -150,16 +150,39 @@\n rn true%0A\n+%09%09%7D%0A%09%09result%5Bv%5D = true%0A\n %09%7D%0A%09retu\n@@ -220,21 +220,17 @@\n , k int%0A\n-%0A%09if \n+%09\n _, err :\n@@ -247,17 +247,21 @@\n (&n, &k)\n-;\n+%0A%0A%09if\n  err != \n@@ -268,22 +268,26 @@\n nil %7B%0A%09%09\n-return\n+panic(err)\n %0A%09%7D%0A%0A%09ar\n@@ -320,43 +320,81 @@\n  := \n-0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&arr%5Bi%5D)\n+range arr %7B%0A%09%09_, err := fmt.Scan(&arr%5Bi%5D)%0A%09%09if err != nil %7B%0A%09%09%09return%0A%09%09%7D\n %0A%09%7D%0A\n@@ -412,20 +412,14 @@\n Sum(\n-0, 0, k, \n arr\n+, k\n ) %7B%0A\n@@ -433,20 +433,19 @@\n rintln(%22\n-true\n+YES\n %22)%0A%09%7D el\n@@ -464,21 +464,18 @@\n rintln(%22\n-false\n+NO\n %22)%0A%09%7D%0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-28_16-40-47",
+            "content": "@@ -133,52 +133,8 @@\n %0A%09%7D%0A\n-%0A%09if current %3E target %7C%7C idx %3E= len(arr) %7B%0A%09\n %09ret\n@@ -143,19 +143,16 @@\n n false%0A\n-%09%7D%0A\n %7D%0Afunc m\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-28_16-41-32",
+            "content": "@@ -193,107 +193,8 @@\n e%0A%09%7D\n-%0A%0A%09return subsetSum(idx+1, current+arr%5Bidx%5D, target, arr) %7C%7C subsetSum(idx+1, current, target, arr)\n %0A%7D%0Af\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-28_16-42-32",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc subsetSum(idx int, current int, target int, arr []int) bool {\n\tif current == target {\n\t\treturn true\n\t}\n\n\tif current > target || idx >= len(arr) {\n\t\treturn false\n\t}\n\n\treturn subsetSum(idx+1, current+arr[idx], target, arr) || subsetSum(idx+1, current, target, arr)\n}\nfunc main() {\n\tvar n, k int\n\n\tif _, err := fmt.Scan(&n, &k); err != nil {\n\t\treturn\n\t}\n\n\tarr := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&arr[i])\n\t}\n\n\tif subsetSum(0, 0, k, arr) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "33"
+        }
+    ]
+}

@@ -22,13 +22,15 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@bfs
-- ed@backtrack
-- ed@tree
-- ed@basic
-- ed@list
 - ed@linear
 - ed@dfs
+- ed@backtrack
+- ed@basic
+- eval1@eval1
+- ed@vector
+- ed@tree
+- ed@list
+- ed@bfs
 flags:
   inbox: inbox
   panel: graph
@@ -36,4 +38,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@basic
+selected: ed@distancia
+selected_index: 4
