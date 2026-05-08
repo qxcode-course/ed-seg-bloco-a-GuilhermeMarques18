@@ -1,0 +1,6 @@
+2026-05-04 15:55:27, MOVE, v:1, k:ed@sudoku, mode:DOWN
+2026-05-04 16:02:34, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-04 16:05:54, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-04 16:11:25, MOVE, v:1, k:ed@bst_remove, mode:DOWN
+2026-05-04 16:12:23, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-04 16:22:20, EXEC, v:1, k:src@go, mode:FREE, size:259
