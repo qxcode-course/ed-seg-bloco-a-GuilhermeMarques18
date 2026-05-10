@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_18-27-01",
+            "content": "@@ -682,64 +682,8 @@\n %0A%09%7D%0A\n-%0A%09if backtrack(0) %7B%0A%09%09fmt.Println(string(standard))%0A%09%7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-10_18-29-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar seq string\n\tvar L int\n\n\tif _, err := fmt.Scan(&seq); err != nil {\n\t\treturn\n\t}\n\n\tif _, err := fmt.Scan(&L); err != nil {\n\t\treturn\n\t}\n\n\tif len(seq) > 100 {\n\t\treturn\n\t}\n\n\tif L > 100 {\n\t\treturn\n\t}\n\n\tstandard := []rune(seq)\n\tres := len(standard)\n\n\tvar backtrack func(pos int) bool\n\tbacktrack = func(pos int) bool {\n\t\tif pos == res {\n\t\t\treturn true\n\t\t}\n\n\t\tif standard[pos] != '.' {\n\t\t\treturn backtrack(pos + 1)\n\t\t}\n\n\t\tfor d := 0; d <= L; d++ {\n\t\t\tcharD := rune(d + '0')\n\t\t\tif isValid(standard, pos, charD, L) {\n\t\t\t\tstandard[pos] = charD\n\t\t\t\tif backtrack(pos + 1) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t\tstandard[pos] = '.'\n\t\t\t}\n\t\t}\n\t\treturn false\n\t}\n\n\tif backtrack(0) {\n\t\tfmt.Println(string(standard))\n\t}\n\n}\n\nfunc isValid(res []rune, pos int, charD rune, L int) bool {\n\tfor i := pos - L; i <= pos+L; i++ {\n\t\tif i >= 0 && i < len(res) && i != pos {\n\t\t\tif res[i] == charD {\n\t\t\t\treturn false\n\t\t\t}\n\t\t}\n\t}\n\treturn true\n}\n",
+            "lines": "68"
+        }
+    ]
+}

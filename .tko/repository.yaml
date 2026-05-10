@@ -23,6 +23,8 @@ sources:
   tasks: null
 expanded:
 - ed@list
+- ed@vector
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
@@ -30,5 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@editorint
-selected_index: 14
+selected: ed@distancia
+selected_index: 6
