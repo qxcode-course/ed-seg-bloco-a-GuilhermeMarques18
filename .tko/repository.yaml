@@ -31,5 +31,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@multiset
-selected_index: 3
+selected: ed@rec
+selected_index: 0
