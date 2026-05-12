@@ -25,11 +25,11 @@ expanded:
 - ed@basic
 - ed@vector
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@rec
-selected_index: 0
+selected: ed@iterador
+selected_index: 17
