@@ -65,3 +65,20 @@
 2026-05-12 11:55:52, MOVE, v:1, k:ed@magicsearch, mode:BACK
 2026-05-12 11:55:59, MOVE, v:1, k:ed@multiset, mode:DOWN
 2026-05-12 11:56:00, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-05-12 14:24:15, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-12 16:58:18, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-12 17:01:28, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-05-12 17:01:29, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:33
+2026-05-12 17:01:29, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:06:38, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:42
+2026-05-12 17:09:55, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:42
+2026-05-12 17:09:54, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:09:54, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:09:55, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:16:08, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:47
+2026-05-12 17:16:17, SELF, v:1, k:ed@bettersearch, self:1, rate:100, concept:1
+2026-05-12 17:16:17, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100
+2026-05-12 17:16:19, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-05-12 17:16:07, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:16:07, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-05-12 17:16:17, MOVE, v:1, k:ed@bettersearch, mode:EDIT

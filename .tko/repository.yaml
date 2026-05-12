@@ -24,7 +24,6 @@ sources:
 expanded:
 - ed@basic
 - ed@vector
-- ed@list
 flags:
   inbox: inbox
   panel: graph
@@ -32,5 +31,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@iterador
-selected_index: 6
+selected: ed@multiset
+selected_index: 3

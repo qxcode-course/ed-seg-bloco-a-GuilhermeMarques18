@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_17-01-29",
+            "content": "@@ -124,127 +124,27 @@\n  %7B%0A%09\n-if len(slice) == 0 %7B%0A%09%09return false, 0%0A%09%7D%0A%0A%09for i, elem := range slice %7B%0A%09%09if elem == value %7B%0A%09%09%09return true, i%0A%09%09%7D%0A%09%7D%0A\n+_, _ = slice, value\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_17-06-38",
+            "content": "@@ -239,16 +239,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09return \n@@ -257,17 +257,16 @@\n alse, 0%0A\n-%0A\n %7D%0A%0Afunc \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-12_17-09-55",
+            "content": "@@ -124,206 +124,119 @@\n  %7B%0A%09\n-low := 0%0A%09high := len(slice)%0A%0A%09for low %3C high %7B%0A%09%09mid := low + (high-low)/2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid\n+if len(slice) == 0 %7B%0A%09%09return false, 0%0A%09%7D%0A%0A%09for i, elem := range slice %7B%0A%09%09if elem == value %7B%0A%09%09%09return true, i\n %0A%09%09%7D\n@@ -258,11 +258,9 @@\n se, \n-low\n+0\n %0A%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-12_17-16-08",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tlow := 0\n\thigh := len(slice)\n\n\tfor low < high {\n\t\tmid := low + (high-low)/2\n\n\t\tif slice[mid] == value {\n\t\t\treturn true, mid\n\t\t} else if slice[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid\n\t\t}\n\t}\n\treturn false, low\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "47"
+        }
+    ]
+}
