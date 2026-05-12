@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_09-35-09",
+            "content": "@@ -56,436 +56,8 @@\n %0A)%0A%0A\n-type Set struct %7B%0A%09data     %5B%5Dint%0A%09size     int%0A%09capacity int%0A%7D%0A%0Afunc NewSet(capacity int) *Set %7B%0A%09return &Set%7B%0A%09%09data:     make(%5B%5Dint, capacity),%0A%09%09capacity: capacity,%0A%09%7D%0A%7D%0A%0Afunc (s *Set) String() string %7B%0A%09sb := strings.Builder%7B%7D%0A%09sb.WriteRune('%5B')%0A%09for i, value := range s.data%5B:s.size%5D %7B%0A%09%09sb.WriteString(fmt.Sprintf(%22%25d%22, value))%0A%09%09if i %3C s.size-1 %7B%0A%09%09%09sb.WriteString(%22, %22)%0A%09%09%7D%0A%09%7D%0A%09sb.WriteRune('%5D')%0A%09return sb.String()%0A%7D%0A%0A\n func\n@@ -129,17 +129,20 @@\n tdin)%0A%0A%09\n-s\n+// v\n  := NewS\n@@ -540,16 +540,16 @@\n %09%09%09// %7D%0A\n+\n %09%09case %22\n@@ -559,35 +559,8 @@\n w%22:%0A\n-%09%09%09fmt.Println(s.String())%0A\n %09%09ca\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-12_10-17-09",
+            "content": "@@ -484,137 +484,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Insert(value int, idx int) int %7B%0A%09if idx %3C 0 %7C%7C idx %3E= s.size %7B%0A%09%09return -1%0A%09%7D%0A%09s.data%5Bidx%5D = value%0A%09return idx%0A%7D%0A%0A\n func\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-05-12_10-20-59",
+            "content": "@@ -31,38 +31,17 @@\n %22%0A%09%22\n-errors%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv\n+fmt%22%0A%09%22os\n %22%0A%09%22\n@@ -494,17 +494,17 @@\n s *Set) \n-i\n+I\n nsert(va\n@@ -521,21 +521,19 @@\n dx int) \n-error\n+int\n  %7B%0A%09if i\n@@ -571,103 +571,10 @@\n urn \n-errors.New(%22index out of bounds%22)%0A%09%7D%0A%09for i := s.size; i %3E idx; i-- %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi\n -1\n-%5D\n %0A%09%7D%0A\n@@ -599,329 +599,18 @@\n ue%0A%09\n-s.size++%0A%09return nil%0A%7D%0A%0Afunc (s *Set) Insert(value int) %7B%0A%0A%7D%0A%0Afunc (s *Set) binarySearch(value int) int %7B%0A%09low := 0%0A%09high := s.size - 1%0A%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%0A%09%09if s.data%5Bmid%5D == value %7B%0A%09%09%09return mid%0A%09%09%7D%0A%09%09if s.data%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return low\n+return idx\n %0A%7D%0A%0A\n@@ -930,16 +930,19 @@\n it%22:%0A%09%09%09\n+// \n value, _\n@@ -971,17 +971,20 @@\n %5B1%5D)%0A%09%09%09\n-s\n+// v\n  = NewSe\n@@ -1012,16 +1012,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1051,16 +1051,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1089,16 +1089,19 @@\n art)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-12_10-40-52",
+            "content": "@@ -1433,18 +1433,16 @@\n rt%22:%0A%09%09%09\n-//\n for _, p\n@@ -1469,18 +1469,16 @@\n :%5D %7B%0A%09%09%09\n-//\n %09value, \n@@ -1504,18 +1504,16 @@\n art)%0A%09%09%09\n-//\n %7D%0A%09%09case\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-05-12_10-41-10",
+            "content": "@@ -570,16 +570,17 @@\n %7C%7C idx %3E\n+=\n  s.size \n@@ -1433,16 +1433,18 @@\n rt%22:%0A%09%09%09\n+//\n for _, p\n@@ -1471,24 +1471,26 @@\n :%5D %7B%0A%09%09%09\n+//\n %09value, \n err := s\n@@ -1481,19 +1481,17 @@\n %09value, \n-err\n+_\n  := strc\n@@ -1512,55 +1512,10 @@\n %0A%09%09%09\n-%09if err == nil %7B%0A%09%09%09%09%09s.Insert(value)%0A%09%09%09%09%7D%0A%09%09%09\n+//\n %7D%0A%09%09\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-05-12_10-43-13",
+            "content": "@@ -772,424 +772,8 @@\n ) %7B%0A\n-%09idx := s.binarySearch(value)%0A%0A%09if idx %3C s.size && s.data%5Bidx%5D == value %7B%0A%09%09return%0A%09%7D%0A%0A%09if s.size == s.capacity %7B%0A%09%09newCap := s.capacity * 2%0A%09%09if newCap == 0 %7B%0A%09%09%09newCap = 1%0A%09%09%7D%0A%09%09s.reserve(newCap)%0A%09%7D%0A%09s.insert(value, idx)%0A%7D%0A%0Afunc (s *Set) reserve(newCapacity int) %7B%0A%09if newCapacity %3C= s.capacity %7B%0A%09%09return%0A%09%7D%0A%09newData := make(%5B%5Dint, newCapacity)%0A%0A%09copy(newData, s.data)%0A%0A%09s.data = newData%0A%09s.capacity = newCapacity\n %0A%7D%0A%0A\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-05-12_11-35-42",
+            "content": "@@ -1455,199 +1455,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Erase(value int) bool %7B%0A%0A%7D%0A%0Afunc (s *Set) Contains(value int) bool %7B%0A%09idx := s.binarySearch(value)%0A%0A%09if idx %3C s.size && s.data%5Bidx%5D == value %7B%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n@@ -2087,24 +2087,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2133,100 +2133,8 @@\n 1%5D)%0A\n-%09%09%09if s.Contains(value) %7B%0A%09%09%09%09fmt.Println(%22true%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22false%22)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-05-12_11-44-42",
+            "content": "@@ -1469,420 +1469,32 @@\n et) \n-erase(value int) error %7B%0A%09idx := s.binarySearch(value)%0A%0A%09if idx %3E= s.size %7C%7C idx %3C 0 %7B%0A%09%09return errors.New(%22Index out of bounds%22)%0A%09%7D%0A%09for i := idx; i %3C s.size-1; i++ %7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%09return nil%0A%7D%0A%0Afunc (s *Set) Erase(value int) bool %7B%0A%09idx := s.binarySearch(value)%0A%0A%09if idx %3C s.size && s.data%5Bidx%5D == value %7B%0A%09%09s.erase(idx)%0A%09%09return true%0A%09%7D%0A%0A%09fmt.Println(%22value not found%22)%0A%09return false\n+Erase(value int) bool %7B%0A\n %0A%7D%0A%0A\n@@ -2218,24 +2218,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -2264,26 +2264,8 @@\n 1%5D)%0A\n-%09%09%09s.Erase(value)%0A\n %09%09ca\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-05-12_11-51-24",
+            "content": "@@ -1471,19 +1471,21 @@\n ) erase(\n-idx\n+value\n  int) er\n@@ -1488,36 +1488,56 @@\n ) error %7B%0A%09i\n-f idx %3C 0 %7C%7C\n+dx := s.binarySearch(value)%0A%0A%09if\n  idx %3E= s.si\n@@ -1531,32 +1531,43 @@\n f idx %3E= s.size \n+%7C%7C idx %3C 0 \n %7B%0A%09%09return error\n@@ -1565,33 +1565,33 @@\n urn errors.New(%22\n-i\n+I\n ndex out of boun\n@@ -1598,17 +1598,16 @@\n ds%22)%0A%09%7D%0A\n-%0A\n %09for i :\n@@ -1659,20 +1659,19 @@\n ta%5Bi+1%5D%0A\n+\n %09%7D%0A\n-%0A\n %09s.size-\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-12_11-54-25",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, capacity),\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (s *Set) String() string {\n\tsb := strings.Builder{}\n\tsb.WriteRune('[')\n\tfor i, value := range s.data[:s.size] {\n\t\tsb.WriteString(fmt.Sprintf(\"%d\", value))\n\t\tif i < s.size-1 {\n\t\t\tsb.WriteString(\", \")\n\t\t}\n\t}\n\tsb.WriteRune(']')\n\treturn sb.String()\n}\n\nfunc (s *Set) insert(value int, idx int) error {\n\tif idx < 0 || idx > s.size {\n\t\treturn errors.New(\"index out of bounds\")\n\t}\n\tfor i := s.size; i > idx; i-- {\n\t\ts.data[i] = s.data[i-1]\n\t}\n\ts.data[idx] = value\n\ts.size++\n\treturn nil\n}\n\nfunc (s *Set) Insert(value int) {\n\tidx := s.binarySearch(value)\n\n\tif idx < s.size && s.data[idx] == value {\n\t\treturn\n\t}\n\n\tif s.size == s.capacity {\n\t\tnewCap := s.capacity * 2\n\t\tif newCap == 0 {\n\t\t\tnewCap = 1\n\t\t}\n\t\ts.reserve(newCap)\n\t}\n\ts.insert(value, idx)\n}\n\nfunc (s *Set) reserve(newCapacity int) {\n\tif newCapacity <= s.capacity {\n\t\treturn\n\t}\n\tnewData := make([]int, newCapacity)\n\n\tcopy(newData, s.data)\n\n\ts.data = newData\n\ts.capacity = newCapacity\n}\n\nfunc (s *Set) binarySearch(value int) int {\n\tlow := 0\n\thigh := s.size - 1\n\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\n\t\tif s.data[mid] == value {\n\t\t\treturn mid\n\t\t}\n\t\tif s.data[mid] < value {\n\t\t\tlow = mid + 1\n\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn low\n}\n\nfunc (s *Set) erase(idx int) error {\n\tif idx < 0 || idx >= s.size {\n\t\treturn errors.New(\"index out of bounds\")\n\t}\n\n\tfor i := idx; i < s.size-1; i++ {\n\t\ts.data[i] = s.data[i+1]\n\t}\n\n\ts.size--\n\treturn nil\n}\n\nfunc (s *Set) Erase(value int) bool {\n\tidx := s.binarySearch(value)\n\n\tif idx < s.size && s.data[idx] == value {\n\t\ts.erase(idx)\n\t\treturn true\n\t}\n\n\tfmt.Println(\"value not found\")\n\treturn false\n}\n\nfunc (s *Set) Contains(value int) bool {\n\tidx := s.binarySearch(value)\n\n\tif idx < s.size && s.data[idx] == value {\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\ts := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\ts = NewSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, err := strconv.Atoi(part)\n\t\t\t\tif err == nil {\n\t\t\t\t\ts.Insert(value)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(s.String())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\ts.Erase(value)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tif s.Contains(value) {\n\t\t\t\tfmt.Println(\"true\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"false\")\n\t\t\t}\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "178"
+        }
+    ]
+}

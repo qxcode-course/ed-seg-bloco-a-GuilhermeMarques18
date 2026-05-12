@@ -22,15 +22,15 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@basic
 - ed@vector
 - ed@list
-- ed@basic
 flags:
   inbox: inbox
   panel: graph
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@bettersearch
-selected_index: 4
+selected: ed@iterador
+selected_index: 6
