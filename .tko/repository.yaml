@@ -22,8 +22,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@vector
 - eval1@eval1
+- ed@list
 flags:
   inbox: all
   panel: graph
@@ -31,5 +31,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@vector
-selected_index: 4
+selected: ed@lista_d2
+selected_index: 7

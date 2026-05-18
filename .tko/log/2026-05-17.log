@@ -21,3 +21,17 @@
 2026-05-17 19:56:01, MOVE, v:1, k:ed@iterador, mode:EDIT
 2026-05-17 19:56:01, MOVE, v:1, k:ed@iterador, mode:EDIT
 2026-05-17 20:01:19, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-05-17 20:02:54, MOVE, v:1, k:ed@lista_d1, mode:DOWN
+2026-05-17 20:02:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:02:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:02:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:02:54, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:10:31, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:10:31, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:13:00, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-17 20:13:02, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:0, size:72
+2026-05-17 20:15:59, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:15:59, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:13:02, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:21:57, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-17 20:21:57, MOVE, v:1, k:ed@lista_d1, mode:EDIT
