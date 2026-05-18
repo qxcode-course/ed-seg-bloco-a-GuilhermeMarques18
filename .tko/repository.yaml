@@ -30,5 +30,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@sudoku
+selected: ed@backtrack
 selected_index: 8
