@@ -53,3 +53,43 @@
 2026-05-18 14:53:33, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100, size:134
 2026-05-18 14:53:38, SELF, v:1, k:ed@lista_d1, self:1, rate:100
 2026-05-18 14:53:39, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-18 14:55:07, MOVE, v:1, k:ed@lista_d2, mode:DOWN
+2026-05-18 14:53:31, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-18 14:53:31, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-18 14:53:33, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-18 14:55:07, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 14:55:07, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 14:55:07, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 14:55:07, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-18 15:48:03, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-05-18 15:48:16, MOVE, v:1, k:ed@n_rainhas, mode:DOWN
+2026-05-18 15:48:24, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-18 15:48:03, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:48:03, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:48:03, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:48:16, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-18 15:48:16, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-18 15:48:16, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-18 15:51:28, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:5
+2026-05-18 15:53:41, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-18 15:54:38, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-18 15:54:41, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:5
+2026-05-18 15:55:40, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-18 15:54:41, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:55:37, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:55:37, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:57:13, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-18 15:59:29, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 15:59:29, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:05:06, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:05:06, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:10:47, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:10:47, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:14:21, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:49
+2026-05-18 16:14:31, SELF, v:1, k:ed@permutacoes, self:1, rate:100
+2026-05-18 16:14:31, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100
+2026-05-18 16:14:33, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-18 16:14:57, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-05-18 16:14:20, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:14:20, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-18 16:14:31, MOVE, v:1, k:ed@permutacoes, mode:EDIT

@@ -22,8 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- eval1@eval1
-- ed@list
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
@@ -31,5 +30,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@lista_d2
-selected_index: 7
+selected: ed@sudoku
+selected_index: 8

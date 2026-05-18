@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-18_15-51-28",
+            "content": "@@ -6,16 +6,28 @@\n ge main%0A\n+import %22fmt%22\n %0Afunc ma\n@@ -33,11 +33,43 @@\n ain() %7B%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-18_15-54-41",
+            "content": "@@ -11,715 +11,21 @@\n in%0A%0A\n-import (%0A%09%22fmt%22%0A%09%22sort%22%0A)%0A%0Afunc Permutacao(seq string) %5B%5Dstring %7B%0A%09var result %5B%5Dstring%0A%09runes := %5B%5Drune(seq)%0A%09backtrack(runes, 0, &result)%0A%09return result%0A%7D%0A%0Afunc backtrack(runes %5B%5Drune, start int, result *%5B%5Dstring) %7B%0A%09if start == len(runes)-1 %7B%0A%09%09*result = append(*result, string(runes))%0A%09%09return%0A%09%7D%0A%0A%09for i := start; i %3C len(runes); i++ %7B%0A%09%09runes%5Bstart%5D, runes%5Bi%5D = runes%5Bi%5D, runes%5Bstart%5D%0A%0A%09%09backtrack(runes, start+1, result)%0A%0A%09%09runes%5Bstart%5D, runes%5Bi%5D = runes%5Bi%5D, runes%5Bstart%5D%0A%09%7D%0A%7D%0A%0Afunc main() %7B%0A%09var s string%0A%0A%09if _, err := fmt.Scan(&s); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09if len(s) %3C 1 %7C%7C len(s) %3E 6 %7B%0A%09%09return%0A%09%7D%0A%0A%09result := Permutacao(s)%0A%0A%09sort.Strings(result)%0A%0A%09for _, v := range result %7B%0A%09%09fmt.Println(v)%0A%09%7D\n+func main() %7B\n %0A%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-18_16-14-21",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"sort\"\n)\n\nfunc Permutacao(seq string) []string {\n\tvar result []string\n\trunes := []rune(seq)\n\tbacktrack(runes, 0, &result)\n\treturn result\n}\n\nfunc backtrack(runes []rune, start int, result *[]string) {\n\tif start == len(runes)-1 {\n\t\t*result = append(*result, string(runes))\n\t\treturn\n\t}\n\n\tfor i := start; i < len(runes); i++ {\n\t\trunes[start], runes[i] = runes[i], runes[start]\n\n\t\tbacktrack(runes, start+1, result)\n\n\t\trunes[start], runes[i] = runes[i], runes[start]\n\t}\n}\n\nfunc main() {\n\tvar s string\n\n\tif _, err := fmt.Scan(&s); err != nil {\n\t\treturn\n\t}\n\n\tif len(s) < 1 || len(s) > 6 {\n\t\treturn\n\t}\n\n\tresult := Permutacao(s)\n\n\tsort.Strings(result)\n\n\tfor _, v := range result {\n\t\tfmt.Println(v)\n\t}\n\n}\n",
+            "lines": "49"
+        }
+    ]
+}
