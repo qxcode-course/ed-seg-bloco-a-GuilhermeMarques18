@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_13-47-26",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,168 +23,53 @@\n mt%22%0A\n-%0A%0A%0Afunc backtracking() int%7B%0A%0A%7D%0Afunc main() %7B%0A    var n int%0A%0A   if  _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A%0A    if n %3E 15%7B%0A        return%0A    %7D%0A%0A\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)%0A%7D\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-19_14-19-56",
+            "content": "@@ -21,16 +21,46 @@\n  %22fmt%22%0A%0A\n+%0A%0Afunc backtracking() int%7B%0A%0A%7D%0A\n func mai\n@@ -65,17 +65,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -80,20 +80,23 @@\n  n int%0A%0A\n-%09\n+   \n if \n+ \n _, err :\n@@ -128,388 +128,64 @@\n l %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09if n %3E 15 %7B%0A%09%09return%0A%09%7D%0A%0A%09xadrez := make(%5B%5D%5B%5Drune, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09xadrez%5Bi%5D = make(%5B%5Drune, n)%0A%09%7D%0A%0A%09resutl := check(xadrez, n)%0A%0A%09if resutl %7B%0A%09%09fmt.Println(%221%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%220%22)%0A%09%7D%0A%7D%0A%0Afunc check(xadrez %5B%5D%5B%5Drune, n int) bool %7B%0A%09for colun := 0; colun %3C len(xadrez); colun++ %7B%0A%09%09if xadrez%5Bn%5D%5Bcolun%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D\n+        return%0A    %7D%0A%0A    if n %3E 15%7B%0A        return%0A    %7D%0A%0A\n %0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-19_14-31-03",
+            "content": "@@ -337,29 +337,25 @@\n z %5B%5D%5B%5Drune, \n-linha\n+n\n  int) bool %7B\n@@ -411,29 +411,25 @@\n %09%09if xadrez%5B\n-linha\n+n\n %5D%5Bcolun%5D == \n@@ -476,890 +476,4 @@\n e%0A%7D%0A\n-%0Afunc linha(xadrez %5B%5D%5B%5Drune, coluna int) bool %7B%0A%09for linha := 0; linha %3C len(xadrez); linha++ %7B%0A%09%09if xadrez%5Blinha%5D%5Bcoluna%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc temNaDiagonal(tabuleiro %5B%5D%5B%5Drune, linha int, coluna int) bool %7B%0A%09n := len(tabuleiro)%0A%0A%09// diagonal para cima-esquerda%0A%09for l, c := linha-1, coluna-1; l %3E= 0 && c %3E= 0; l, c = l-1, c-1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09// diagonal para cima-direita%0A%09for l, c := linha-1, coluna+1; l %3E= 0 && c %3C n; l, c = l-1, c+1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09// diagonal para baixo-esquerda%0A%09for l, c := linha+1, coluna-1; l %3C n && c %3E= 0; l, c = l+1, c-1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09// diagonal para baixo-direita%0A%09for l, c := linha+1, coluna+1; l %3C n && c %3C n; l, c = l+1, c+1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-19_14-47-03",
+            "content": "@@ -232,27 +232,21 @@\n  := \n-podeColocar\n+check\n (xadrez,\n  n, \n@@ -245,11 +245,8 @@\n rez,\n- n,\n  n)%0A\n@@ -310,17 +310,16 @@\n %220%22)%0A%09%7D%0A\n-%0A\n %7D%0A%0Afunc \n@@ -738,24 +738,56 @@\n tabuleiro)%0A%0A\n+%09// diagonal para cima-esquerda%0A\n %09for l, c :=\n@@ -887,32 +887,63 @@\n rn true%0A%09%09%7D%0A%09%7D%0A%0A\n+%09// diagonal para cima-direita%0A\n %09for l, c := lin\n@@ -1038,32 +1038,65 @@\n rn true%0A%09%09%7D%0A%09%7D%0A%0A\n+%09// diagonal para baixo-esquerda%0A\n %09for l, c := lin\n@@ -1191,32 +1191,64 @@\n rn true%0A%09%09%7D%0A%09%7D%0A%0A\n+%09// diagonal para baixo-direita%0A\n %09for l, c := lin\n@@ -1342,32 +1342,32 @@\n rn true%0A%09%09%7D%0A%09%7D%0A%0A\n+\n %09return false%0A%7D%0A\n@@ -1370,441 +1370,4 @@\n e%0A%7D%0A\n-%0Afunc podeColocar(tabuleiro %5B%5D%5B%5Drune, linha int, coluna int) bool %7B%0A%09n := len(tabuleiro)%0A%0A%09for l := 0; l %3C linha; l++ %7B%0A%09%09if tabuleiro%5Bl%5D%5Bcoluna%5D == 'Q' %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09for l, c := linha-1, coluna-1; l %3E= 0 && c %3E= 0; l, c = l-1, c-1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09for l, c := linha-1, coluna+1; l %3E= 0 && c %3C n; l, c = l-1, c+1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09return true%0A%7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-19_14-49-46",
+            "content": "@@ -50,21 +50,61 @@\n int%0A\n-%09fmt.Scan(&n)\n+%0A%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D\n %0A%0A%09i\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-05-19_14-50-00",
+            "content": "@@ -212,12 +212,12 @@\n ez, \n-0, 0\n+n, n\n )%0A%0A%09\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-19_14-51-14",
+            "content": "@@ -178,133 +178,473 @@\n n)%0A%09\n-%09for j := 0; j %3C n; j\n+%7D%0A%0A%09resutl := podeColocar(xadrez, 0, 0)%0A%0A%09if resutl %7B%0A%09%09fmt.Println(%221%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%220%22)%0A%09%7D%0A%0A%7D%0A%0Afunc check(xadrez %5B%5D%5B%5Drune, linha int) bool %7B%0A%09for colun := 0; colun %3C len(xadrez); colun\n ++ %7B%0A%09%09\n-%09\n+if \n xadrez%5B\n-i%5D%5Bj\n+linha%5D%5Bcolun\n %5D =\n+=\n  '\n-.'%0A%09%09%7D%0A\n+Q' %7B%0A%09%09%09return true%0A%09\n %09%7D%0A\n+%09%7D\n %0A%09re\n-sult := resolver(xadrez, 0)%0A%0A%09fmt.Println(result)%0A%7D%0A%0Afunc resolver\n+turn false%0A%7D%0A%0Afunc linha(xadrez %5B%5D%5B%5Drune, coluna int) bool %7B%0A%09for linha := 0; linha %3C len(xadrez); linha++ %7B%0A%09%09if xadrez%5Blinha%5D%5Bcoluna%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D%0A%0Afunc temNaDiagonal\n (tab\n@@ -673,13 +673,26 @@\n  int\n-) int\n+, coluna int) bool\n  %7B%0A%09\n@@ -717,134 +717,276 @@\n )%0A%0A%09\n-if linha == n %7B%0A%09%09return 1%0A%09%7D%0A%0A%09total := 0%0A%0A%09for coluna := 0; coluna %3C n; coluna++ %7B%0A%09%09if podeColocar(tabuleiro,\n+for l, c := linha-1, coluna-1; l %3E= 0 && c %3E= 0; l, c = l-1, c-1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09for l, c := linha-1, coluna+1; l %3E= 0 && c %3C n; l, c = l-1, c+1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc%5D == 'Q' %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09for l, c :=\n  linha\n++1\n , coluna\n ) %7B%0A\n@@ -985,15 +985,52 @@\n luna\n-)\n+-1; l %3C n && c %3E= 0; l, c = l+1, c-1\n  %7B%0A%09%09\n-%09\n+if \n tabu\n@@ -1040,104 +1040,155 @@\n ro%5Bl\n-inha%5D%5Bcoluna\n+%5D%5Bc\n %5D =\n+=\n  'Q'\n-%0A\n+ %7B\n %0A%09%09%09\n-total += resolver(tabuleiro, linha+1)%0A%0A%09%09%09tabuleiro%5Blinha%5D%5Bcoluna\n+return true%0A%09%09%7D%0A%09%7D%0A%0A%09for l, c := linha+1, coluna+1; l %3C n && c %3C n; l, c = l+1, c+1 %7B%0A%09%09if tabuleiro%5Bl%5D%5Bc\n %5D =\n+=\n  '\n-.'\n+Q' %7B%0A%09%09%09return true\n %0A%09%09%7D\n@@ -1204,13 +1204,13 @@\n urn \n-total\n+false\n %0A%7D%0A%0A\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-19_14-51-44",
+            "content": "@@ -241,28 +241,24 @@\n sult := \n-backtracking\n+resolver\n (xadrez,\n@@ -291,28 +291,24 @@\n %7D%0A%0Afunc \n-backtracking\n+resolver\n (tabulei\n@@ -450,21 +450,27 @@\n  %7B%0A%09%09if \n-check\n+podeColocar\n (tabulei\n@@ -541,20 +541,16 @@\n  += \n-backtracking\n+resolver\n (tab\n@@ -635,13 +635,19 @@\n unc \n-check\n+podeColocar\n (tab\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-05-19_14-56-54",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tif n > 15 {\n\t\treturn\n\t}\n\n\txadrez := make([][]rune, n)\n\n\tfor i := 0; i < n; i++ {\n\t\txadrez[i] = make([]rune, n)\n\t\tfor j := 0; j < n; j++ {\n\t\t\txadrez[i][j] = '.'\n\t\t}\n\t}\n\n\tresult := backtracking(xadrez, 0)\n\n\tfmt.Println(result)\n}\n\nfunc backtracking(tabuleiro [][]rune, linha int) int {\n\tn := len(tabuleiro)\n\n\tif linha == n {\n\t\treturn 1\n\t}\n\n\ttotal := 0\n\n\tfor coluna := 0; coluna < n; coluna++ {\n\t\tif check(tabuleiro, linha, coluna) {\n\t\t\ttabuleiro[linha][coluna] = 'Q'\n\n\t\t\ttotal += backtracking(tabuleiro, linha+1)\n\n\t\t\ttabuleiro[linha][coluna] = '.'\n\t\t}\n\t}\n\n\treturn total\n}\n\nfunc check(tabuleiro [][]rune, linha int, coluna int) bool {\n\tn := len(tabuleiro)\n\n\tfor l := 0; l < linha; l++ {\n\t\tif tabuleiro[l][coluna] == 'Q' {\n\t\t\treturn false\n\t\t}\n\t}\n\n\tfor l, c := linha-1, coluna-1; l >= 0 && c >= 0; l, c = l-1, c-1 {\n\t\tif tabuleiro[l][c] == 'Q' {\n\t\t\treturn false\n\t\t}\n\t}\n\n\tfor l, c := linha-1, coluna+1; l >= 0 && c < n; l, c = l-1, c+1 {\n\t\tif tabuleiro[l][c] == 'Q' {\n\t\t\treturn false\n\t\t}\n\t}\n\n\treturn true\n}\n",
+            "lines": "71"
+        }
+    ]
+}

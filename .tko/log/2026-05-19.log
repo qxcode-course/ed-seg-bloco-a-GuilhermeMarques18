@@ -1,0 +1,54 @@
+2026-05-19 13:47:11, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-05-19 13:47:16, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-05-19 13:47:25, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 13:47:26, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:5
+2026-05-19 13:48:18, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0
+2026-05-19 13:48:18, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:14:21, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0
+2026-05-19 14:14:23, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:14:32, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:14:20, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:19:15, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:19:53, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:19:56, EXEC, v:1, k:ed@n_rainhas, mode:FULL, size:21, fail:COMP
+2026-05-19 14:20:00, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:20:01, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:19:47, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:19:47, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:31:03, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:38
+2026-05-19 14:31:02, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:31:02, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:31:03, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:40:19, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0
+2026-05-19 14:40:20, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:40:25, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:40:19, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:43:21, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:43:21, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:47:03, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:81
+2026-05-19 14:45:30, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-05-19 14:47:02, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:47:02, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:47:03, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:49:46, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:102
+2026-05-19 14:50:00, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:99
+2026-05-19 14:50:01, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0
+2026-05-19 14:51:14, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8, size:99
+2026-05-19 14:51:44, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100, size:71
+2026-05-19 14:51:42, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:51:42, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:51:43, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:56:18, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:56:53, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:56:54, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100, size:71
+2026-05-19 14:56:55, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:56:56, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-05-19 14:56:57, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-05-19 14:57:04, SELF, v:1, k:ed@n_rainhas, self:1, rate:100
+2026-05-19 14:57:04, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-05-19 14:57:06, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-05-19 14:56:52, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:56:52, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 14:57:04, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-05-19 15:49:54, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-19 15:49:55, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:0, size:93
