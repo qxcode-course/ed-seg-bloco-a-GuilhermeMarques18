@@ -16,7 +16,7 @@ type Node struct {
 
 func BstInsert(values []int) *Node {
 	// TODO
-	_ = values
+	// = values
 	return nil
 }
 
