@@ -27,5 +27,5 @@ flags:
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@lista_d3
-selected_index: 5
+selected: ed@basic
+selected_index: 0
