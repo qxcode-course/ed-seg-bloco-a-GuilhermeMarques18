@@ -9,11 +9,25 @@ import (
 )
 
 func processa(vet []int) {
-	_ = vet;
-	// 1. defina o ponto de parada
-	// 2. monte o vetor auxiliar com os resultados das somas
-	// 3. chame recursivamente a função processa para o vetor auxiliar
-	// 4. imprima o vetor original
+	if len(vet) < 1 {
+		return
+	}
+	slice := []int{}
+	for i := 0; i < len(vet)-1; i++ {
+		soma := vet[i] + vet[i+1]
+		slice = append(slice, soma)
+	}
+
+	processa(slice)
+
+	fmt.Print("[ ")
+	for i, v := range vet {
+		fmt.Print(v)
+		if i < len(vet)-1 {
+			fmt.Print(" ")
+		}
+	}
+	fmt.Println(" ]")
 }
 
 func main() {
