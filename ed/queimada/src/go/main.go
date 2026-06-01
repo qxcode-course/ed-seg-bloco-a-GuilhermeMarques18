@@ -7,7 +7,6 @@ import (
 )
 
 func burnTrees(grid [][]rune, l, c int) {
-	// se estiver fora da matriz, retorne
 	if l < 0 || c < 0 || l > len(grid)-1 || c > len(grid[0])-1 {
 		return
 	}
