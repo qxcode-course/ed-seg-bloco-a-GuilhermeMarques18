@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-05-25_16-11-10",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,221 +37,39 @@\n ) %7B%0A\n-%0A%09var n, x int%0A%09fmt.Scan(&n)%0A%0A%09animal := make(map%5Bint%5Dint)%0A%09casal := 0%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&x)%0A%0A%09%09if animal%5B-x%5D %3E 0 %7B%0A%09%09%09casal++%0A%09%09%09animal%5B-x%5D--%0A%09%09%7D else %7B%0A%09%09%09animal%5Bx%5D++%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(casal\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-01_14-03-54",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar n, x int\n\tfmt.Scan(&n)\n\n\tanimal := make(map[int]int)\n\tcasal := 0\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&x)\n\n\t\tif animal[-x] > 0 {\n\t\t\tcasal++\n\t\t\tanimal[-x]--\n\t\t} else {\n\t\t\tanimal[x]++\n\t\t}\n\t}\n\tfmt.Println(casal)\n}\n",
+            "lines": "23"
         }
     ]
 }
