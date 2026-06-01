@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_09-45-31",
+            "content": "@@ -10,769 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09input := scanner.Text()%0A%0A%09var left %5B%5Drune%0A%09var right %5B%5Drune%0A%0A%09for _, c := range input %7B%0A%09%09switch c %7B%0A%09%09case 'R':%0A%09%09%09left = append(left, '%5Cn')%0A%0A%09%09case 'B':%0A%09%09%09if len(left) %3E 0 %7B%0A%09%09%09%09left = left%5B:len(left)-1%5D%0A%09%09%09%7D%0A%0A%09%09case 'D':%0A%09%09%09if len(right) %3E 0 %7B%0A%09%09%09%09right = right%5B1:%5D%0A%09%09%09%7D%0A%0A%09%09case '%3C':%0A%09%09%09if len(left) %3E 0 %7B%0A%09%09%09%09last := left%5Blen(left)-1%5D%0A%09%09%09%09left = left%5B:len(left)-1%5D%0A%09%09%09%09right = append(%5B%5Drune%7Blast%7D, right...)%0A%09%09%09%7D%0A%0A%09%09case '%3E':%0A%09%09%09if len(right) %3E 0 %7B%0A%09%09%09%09left = append(left, right%5B0%5D)%0A%09%09%09%09right = right%5B1:%5D%0A%09%09%09%7D%0A%0A%09%09default:%0A%09%09%09// letras min%C3%BAsculas e '-'%0A%09%09%09left = append(left, c)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Print(string(left))%0A%09fmt.Print(%22%7C%22)%0A%09fmt.Print(string(right)\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-01_09-52-32",
+            "content": "@@ -638,16 +638,46 @@\n efault:%0A\n+%09%09%09// letras min%C3%BAsculas e '-'%0A\n %09%09%09left \n@@ -741,10 +741,8 @@\n rint\n-ln\n (%22%7C%22\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-01_09-53-19",
+            "content": "@@ -707,16 +707,18 @@\n mt.Print\n+ln\n (%22%7C%22)%0A%09f\n@@ -725,18 +725,16 @@\n mt.Print\n-ln\n (string(\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-01_09-53-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tinput := scanner.Text()\n\n\tvar left []rune\n\tvar right []rune\n\n\tfor _, c := range input {\n\t\tswitch c {\n\t\tcase 'R':\n\t\t\tleft = append(left, '\\n')\n\n\t\tcase 'B':\n\t\t\tif len(left) > 0 {\n\t\t\t\tleft = left[:len(left)-1]\n\t\t\t}\n\n\t\tcase 'D':\n\t\t\tif len(right) > 0 {\n\t\t\t\tright = right[1:]\n\t\t\t}\n\n\t\tcase '<':\n\t\t\tif len(left) > 0 {\n\t\t\t\tlast := left[len(left)-1]\n\t\t\t\tleft = left[:len(left)-1]\n\t\t\t\tright = append([]rune{last}, right...)\n\t\t\t}\n\n\t\tcase '>':\n\t\t\tif len(right) > 0 {\n\t\t\t\tleft = append(left, right[0])\n\t\t\t\tright = right[1:]\n\t\t\t}\n\n\t\tdefault:\n\t\t\tleft = append(left, c)\n\t\t}\n\t}\n\n\tfmt.Print(string(left))\n\tfmt.Print(\"|\")\n\tfmt.Println(string(right))\n}\n",
+            "lines": "53"
+        }
+    ]
+}
