@@ -19,7 +19,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
+- ed@tree
+- ed@linear
 flags:
   inbox: all
   panel: skills
@@ -28,4 +29,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@tree
-selected_index: 16
+selected_index: 10

@@ -153,3 +153,7 @@
 2026-06-01 16:48:06, MOVE, v:1, k:ed@bufferring, mode:EDIT
 2026-06-01 16:48:06, MOVE, v:1, k:ed@bufferring, mode:EDIT
 2026-06-01 16:48:13, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-01 17:07:15, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-01 17:07:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-01 17:07:19, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-01 17:07:22, MOVE, v:1, k:ed@fila_enc, mode:DOWN
