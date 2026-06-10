@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_14-55-43",
+            "content": "@@ -96,64 +96,8 @@\n %0A%7D%0A%0A\n-func (q *Queue%5BT%5D) Len() int %7B%0A%09return q.items.Len()%0A%7D%0A%0A\n func\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-09_15-32-51",
+            "content": "@@ -504,255 +504,8 @@\n %0A%7D%0A%0A\n-func (q *Queue%5BT%5D) Torneio() %7B%0A%09for q.items.Len() %3E 1 %7B%0A%09%09timeA := q.Dequeue()%0A%09%09timeB := q.Dequeue()%0A%09%09var golsA, golsB int%0A%09%09fmt.Scan(&golsA, &golsB)%0A%09%09if golsA %3E golsB %7B%0A%09%09%09q.Enqueue(timeA)%0A%09%09%7D else %7B%0A%09%09%09q.Enqueue(timeB)%0A%09%09%7D%0A%09%7D%0A%09q.Dequeue()%0A%7D%0A%0A\n func\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_15-52-05",
+            "content": "@@ -736,20 +736,8 @@\n %09%7D%0A%09\n-fmt.Println(\n q.De\n@@ -743,17 +743,16 @@\n equeue()\n-)\n %0A%7D%0A%0Afunc\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-09_15-53-44",
+            "content": "@@ -0,0 +1,1016 @@\n+package main%0A%0Aimport (%0A%09%22container/list%22%0A%09%22fmt%22%0A)%0A%0Atype Queue%5BT any%5D struct %7B%0A%09items *list.List%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Len() int %7B%0A%09return q.items.Len()%0A%7D%0A%0Afunc NewQueue%5BT any%5D() *Queue%5BT%5D %7B%0A%09return &Queue%5BT%5D%7Bitems: list.New()%7D%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Enqueue(item T) %7B%0A%09q.items.PushBack(item)%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Dequeue() T %7B%0A%09if q.items.Len() == 0 %7B%0A%09%09var zero T%0A%09%09return zero // Return zero value if queue is empty%0A%09%7D%0A%09front := q.items.Front().Value.(T)%0A%09q.items.Remove(q.items.Front())%0A%09return front%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Torneio() %7B%0A%09for q.items.Len() %3E 1 %7B%0A%09%09timeA := q.Dequeue()%0A%09%09timeB := q.Dequeue()%0A%09%09var golsA, golsB int%0A%09%09fmt.Scan(&golsA, &golsB)%0A%09%09if golsA %3E golsB %7B%0A%09%09%09q.Enqueue(timeA)%0A%09%09%7D else %7B%0A%09%09%09q.Enqueue(timeB)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(q.Dequeue())%0A%7D%0A%0Afunc (q *Queue%5BT%5D) IsEmpty() bool %7B%0A%09return q.items.Len() == 0%0A%7D%0A%0Afunc (q *Queue%5BT%5D) String() string %7B%0A%09var result string%0A%09for e := q.items.Front(); e != nil; e = e.Next() %7B%0A%09%09result += fmt.Sprint(e.Value.(T)) + %22 %22%0A%09%7D%0A%09return %22%5B %22 + result + %22%5D%22%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-09_15-54-43",
+            "content": "@@ -1,30 +0,0 @@\n-package main%0A%0Afunc main() %7B%0A%7D%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2026-06-09_15-55-02",
+            "content": "@@ -11,1006 +11,20 @@\n in%0A%0A\n-import (%0A%09%22container/list%22%0A%09%22fmt%22%0A)%0A%0Atype Queue%5BT any%5D struct %7B%0A%09items *list.List%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Len() int %7B%0A%09return q.items.Len()%0A%7D%0A%0Afunc NewQueue%5BT any%5D() *Queue%5BT%5D %7B%0A%09return &Queue%5BT%5D%7Bitems: list.New()%7D%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Enqueue(item T) %7B%0A%09q.items.PushBack(item)%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Dequeue() T %7B%0A%09if q.items.Len() == 0 %7B%0A%09%09var zero T%0A%09%09return zero // Return zero value if queue is empty%0A%09%7D%0A%09front := q.items.Front().Value.(T)%0A%09q.items.Remove(q.items.Front())%0A%09return front%0A%7D%0A%0Afunc (q *Queue%5BT%5D) Torneio() %7B%0A%09for q.items.Len() %3E 1 %7B%0A%09%09timeA := q.Dequeue()%0A%09%09timeB := q.Dequeue()%0A%09%09var golsA, golsB int%0A%09%09fmt.Scan(&golsA, &golsB)%0A%09%09if golsA %3E golsB %7B%0A%09%09%09q.Enqueue(timeA)%0A%09%09%7D else %7B%0A%09%09%09q.Enqueue(timeB)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(q.Dequeue())%0A%7D%0A%0Afunc (q *Queue%5BT%5D) IsEmpty() bool %7B%0A%09return q.items.Len() == 0%0A%7D%0A%0Afunc (q *Queue%5BT%5D) String() string %7B%0A%09var result string%0A%09for e := q.items.Front(); e != nil; e = e.Next() %7B%0A%09%09result += fmt.Sprint(e.Value.(T)) + %22 %22%0A%09%7D%0A%09return %22%5B %22 + result + %22%5D%22\n+func main() %7B\n %0A%7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-09_15-58-54",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\ntype Queue[T any] struct {\n\titems *list.List\n}\n\nfunc (q *Queue[T]) Len() int {\n\treturn q.items.Len()\n}\n\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{items: list.New()}\n}\n\nfunc (q *Queue[T]) Enqueue(item T) {\n\tq.items.PushBack(item)\n}\n\nfunc (q *Queue[T]) Dequeue() T {\n\tif q.items.Len() == 0 {\n\t\tvar zero T\n\t\treturn zero // Return zero value if queue is empty\n\t}\n\tfront := q.items.Front().Value.(T)\n\tq.items.Remove(q.items.Front())\n\treturn front\n}\n\nfunc (q *Queue[T]) Torneio() {\n\tfor q.items.Len() > 1 {\n\t\ttimeA := q.Dequeue()\n\t\ttimeB := q.Dequeue()\n\t\tvar golsA, golsB int\n\t\tfmt.Scan(&golsA, &golsB)\n\t\tif golsA > golsB {\n\t\t\tq.Enqueue(timeA)\n\t\t} else {\n\t\t\tq.Enqueue(timeB)\n\t\t}\n\t}\n\tfmt.Println(q.Dequeue())\n}\n\nfunc (q *Queue[T]) IsEmpty() bool {\n\treturn q.items.Len() == 0\n}\n\nfunc (q *Queue[T]) String() string {\n\tvar result string\n\tfor e := q.items.Front(); e != nil; e = e.Next() {\n\t\tresult += fmt.Sprint(e.Value.(T)) + \" \"\n\t}\n\treturn \"[ \" + result + \"]\"\n}\n",
+            "lines": "59"
+        }
+    ]
+}
