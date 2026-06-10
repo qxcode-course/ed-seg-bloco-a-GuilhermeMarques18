@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_16-04-37",
+            "content": "@@ -45,43 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l int%0A%09c int%0A%7D%0A%0A\n func\n@@ -114,422 +114,357 @@\n ()%0A%09\n-stack.Push(Pos%7B\n+_ , _ , _ = mat, \n l, c\n-%7D)\n %0A%0A%09\n-for !stack.IsEmpty() %7B%0A%09%09after := stack.Pop()%0A%0A%09%09if after.l %3C 0 %7C%7C after.c %3C 0 %7C%7C after.l %3E= len(grid) %7C%7C after.c %3E= len(grid%5B0%5D) %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09if grid%5Bafter.l%5D%5Bafter.c%5D == '#' %7B%0A%0A%09%09%09grid%5Bafter.l%5D%5Bafter.c%5D = 'o'%0A%0A%09%09%09stack.Push(Pos%7Bafter.l - 1, after.c%7D)%0A%09%09%09stack.Push(Pos%7Bafter.l + 1, after.c%7D)%0A%09%09%09stack.Push(Pos%7Bafter.l, after.c - 1%7D)%0A%09%09%09stack.Push(Pos%7Bafter.l, after.c + 1%7D)%0A%09%09%7D%0A%09%7D\n+// Essa fun%C3%A7%C3%A3o deve usar uma list como pilha%0A%09// e marcar as %C3%A1rvores na matriz como queimados%0A%09// Uma sugest%C3%A3o de como fazer isso %C3%A9:%0A%09// - adicionar a primeira posi%C3%A7%C3%A3o na pilha%0A%09// - enquanto a pilha n%C3%A3o estiver vazia:%0A%09//   - retirar o elemento do topo%0A%09//   - se puder ser queimado, queime e adicione seus vizinhos %C3%A0 pilha%0A\n %0A%7D%0A%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_16-46-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{l, c})\n\n\tfor !stack.IsEmpty() {\n\t\tafter := stack.Pop()\n\n\t\tif after.l < 0 || after.c < 0 || after.l >= len(grid) || after.c >= len(grid[0]) {\n\t\t\tcontinue\n\t\t}\n\n\t\tif grid[after.l][after.c] == '#' {\n\n\t\t\tgrid[after.l][after.c] = 'o'\n\n\t\t\tstack.Push(Pos{after.l - 1, after.c})\n\t\t\tstack.Push(Pos{after.l + 1, after.c})\n\t\t\tstack.Push(Pos{after.l, after.c - 1})\n\t\t\tstack.Push(Pos{after.l, after.c + 1})\n\t\t}\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "58"
+        }
+    ]
+}
