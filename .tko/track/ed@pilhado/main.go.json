@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_00-30-15",
+            "content": "@@ -18,83 +18,31 @@\n ort \n-%22fmt%22%0A%0Afunc main() %7B%0A%09var n, m int%0A\n+(%0A%09%22bufio%22\n %0A%09\n+%22\n fmt\n-.Scan(&n, &m)%0A%0A%09stack := NewStack(\n+%22%0A%09%22os%22%0A\n )%0A%0A\n-%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-10_00-45-31",
+            "content": "@@ -18,33 +18,13 @@\n ort \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)\n+%22fmt%22\n %0A%0Afu\n@@ -74,1468 +74,27 @@\n )%0A%0A%09\n-matriz := make(%5B%5D%5B%5Drune, n)%0A%09visitado := make(%5B%5D%5B%5Dbool, n)%0A%0A%09for i := range matriz %7B%0A%09%09matriz%5Bi%5D = make(%5B%5Drune, m)%0A%09%09visitado%5Bi%5D = make(%5B%5Dbool, m)%0A%09%7D%0A%0A%09var initial, finish Post%0A%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09if scanner.Scan() %7B%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if scanner.Scan() %7B%0A%09%09%09linha := scanner.Text()%0A%09%09%09for j := 0; j %3C m && j %3C len(linha); j++ %7B%0A%09%09%09%09matriz%5Bi%5D%5Bj%5D = rune(linha%5Bj%5D)%0A%09%09%09%09if matriz%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09%09%09%09initial = Post%7Bl: i, c: j%7D%0A%09%09%09%09%7D else if matriz%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09%09%09%09finish = Post%7Bl: i, c: j%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09caminho := NewStack%5BPost%5D()%0A%09becos := NewStack%5BPost%5D()%0A%0A%09caminho.Push(initial)%0A%0A%09dl := %5B%5Dint%7B-1, 0, 1, 0%7D%0A%09dc := %5B%5Dint%7B0, 1, 0, -1%7D%0A%0A%09for !caminho.IsEmpty() %7B%0A%09%09atual := caminho.Top()%0A%09%09visitado%5Batual.l%5D%5Batual.c%5D = true%0A%0A%09%09if atual.l == finish.l && atual.c == finish.c %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09encontrou := false%0A%0A%09%09for i := 0; i %3C 4; i++ %7B%0A%09%09%09nl := atual.l + dl%5Bi%5D%0A%09%09%09nc := atual.c + dc%5Bi%5D%0A%0A%09%09%09if nl %3C 0 %7C%7C nl %3E= n %7C%7C nc %3C 0 %7C%7C nc %3E= m %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09if matriz%5Bnl%5D%5Bnc%5D != '#' && !visitado%5Bnl%5D%5Bnc%5D %7B%0A%09%09%09%09caminho.Push(Post%7Bl: nl, c: nc%7D)%0A%09%09%09%09encontrou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if !encontrou %7B%0A%09%09%09beco := caminho.Pop()%0A%09%09%09becos.Push(beco)%0A%09%09%7D%0A%09%7D%0A%0A%09for !caminho.IsEmpty() %7B%0A%09%09pos := caminho.Pop()%0A%0A%09%09if matriz%5Bpos.l%5D%5Bpos.c%5D != 'I' && matriz%5Bpos.l%5D%5Bpos.c%5D != 'F' %7B%0A%09%09%09matriz%5Bpos.l%5D%5Bpos.c%5D = '.'%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C m; j++ %7B%0A%09%09%09fmt.Print(string(matriz%5Bi%5D%5Bj%5D))%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D\n+stack := NewStack()%0A\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-10_00-58-36",
+            "content": "@@ -310,52 +310,8 @@\n din)\n-%0A%09scanner.Buffer(make(%5B%5Dbyte, 0), 1024*1024)\n %0A%0A%09i\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-10_01-04-40",
+            "content": "@@ -336,25 +336,17 @@\n %5B%5Dbyte, \n-1024*1024\n+0\n ), 1024*\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-10_01-04-58",
+            "content": "@@ -361,16 +361,19 @@\n 1024)%0A%0A%09\n+if \n scanner.\n@@ -382,43 +382,13 @@\n an()\n-%0A%09fmt.Sscan(scanner.Text(), &n, &m)\n+ %7B%0A%09%7D\n %0A%0A%09f\n@@ -413,16 +413,19 @@\n i++ %7B%0A%09%09\n+if \n scanner.\n@@ -430,17 +430,20 @@\n r.Scan()\n-%0A\n+ %7B%0A%09\n %09%09linha \n@@ -460,16 +460,17 @@\n .Text()%0A\n+%09\n %09%09for j \n@@ -506,16 +506,17 @@\n ; j++ %7B%0A\n+%09\n %09%09%09matri\n@@ -539,24 +539,25 @@\n inha%5Bj%5D)%0A%09%09%09\n+%09\n if matriz%5Bi%5D\n@@ -565,24 +565,25 @@\n j%5D == 'I' %7B%0A\n+%09\n %09%09%09%09initial \n@@ -597,24 +597,25 @@\n l: i, c: j%7D%0A\n+%09\n %09%09%09%7D else if\n@@ -641,16 +641,17 @@\n ' %7B%0A%09%09%09%09\n+%09\n finish =\n@@ -668,16 +668,22 @@\n , c: j%7D%0A\n+%09%09%09%09%7D%0A\n %09%09%09%7D%0A%09%09%7D\n@@ -683,17 +683,16 @@\n %09%09%7D%0A%09%09%7D%0A\n-%0A\n %09%7D%0A%0A%09cam\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-10_01-06-39",
+            "content": "@@ -60,156 +60,32 @@\n  %7B%0A%09\n-scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Buffer(make(%5B%5Dbyte, 1024*1024), 1024*1024)%0A%0A%09var n, m int%0A%09scanner.Scan()\n+var n, m int%0A\n %0A%09fmt.S\n-s\n can(\n-scanner.Text(), \n &n, \n@@ -149,16 +149,17 @@\n ool, n)%0A\n+%0A\n %09for i :\n@@ -267,16 +267,161 @@\n sh Post%0A\n+%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Buffer(make(%5B%5Dbyte, 1024*1024), 1024*1024)%0A%0A%09scanner.Scan()%0A%09fmt.Sscan(scanner.Text(), &n, &m)%0A%0A\n %09for i :\n@@ -688,24 +688,25 @@\n j%7D%0A%09%09%09%7D%0A%09%09%7D%0A\n+%0A\n %09%7D%0A%0A%09caminho\n@@ -753,16 +753,17 @@\n Post%5D()%0A\n+%0A\n %09caminho\n@@ -918,16 +918,17 @@\n  = true%0A\n+%0A\n %09%09if atu\n@@ -982,16 +982,17 @@\n eak%0A%09%09%7D%0A\n+%0A\n %09%09encont\n@@ -1004,16 +1004,17 @@\n = false%0A\n+%0A\n %09%09for i \n@@ -1082,16 +1082,17 @@\n + dc%5Bi%5D%0A\n+%0A\n %09%09%09if nl\n@@ -1148,16 +1148,17 @@\n ue%0A%09%09%09%7D%0A\n+%0A\n %09%09%09if ma\n@@ -1277,16 +1277,17 @@\n %09%09%7D%0A%09%09%7D%0A\n+%0A\n %09%09if !en\n@@ -1398,16 +1398,17 @@\n o.Pop()%0A\n+%0A\n %09%09if mat\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-10_01-07-36",
+            "content": "@@ -1368,16 +1368,83 @@\n o.Pop()%0A\n+%09%09if matriz%5Bpos.l%5D%5Bpos.c%5D != 'I' && matriz%5Bpos.l%5D%5Bpos.c%5D != 'F' %7B%0A%09\n %09%09matriz\n@@ -1464,16 +1464,19 @@\n %5D = '.'%0A\n+%09%09%7D\n %0A%09%7D%0A%0A%09fo\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-06-10_01-08-46",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Buffer(make([]byte, 1024*1024), 1024*1024)\n\n\tvar n, m int\n\tscanner.Scan()\n\tfmt.Sscan(scanner.Text(), &n, &m)\n\n\tmatriz := make([][]rune, n)\n\tvisitado := make([][]bool, n)\n\tfor i := range matriz {\n\t\tmatriz[i] = make([]rune, m)\n\t\tvisitado[i] = make([]bool, m)\n\t}\n\n\tvar initial, finish Post\n\tfor i := 0; i < n; i++ {\n\t\tscanner.Scan()\n\t\tlinha := scanner.Text()\n\t\tfor j := 0; j < m && j < len(linha); j++ {\n\t\t\tmatriz[i][j] = rune(linha[j])\n\t\t\tif matriz[i][j] == 'I' {\n\t\t\t\tinitial = Post{l: i, c: j}\n\t\t\t} else if matriz[i][j] == 'F' {\n\t\t\t\tfinish = Post{l: i, c: j}\n\t\t\t}\n\t\t}\n\t}\n\n\tcaminho := NewStack[Post]()\n\tbecos := NewStack[Post]()\n\tcaminho.Push(initial)\n\n\tdl := []int{-1, 0, 1, 0}\n\tdc := []int{0, 1, 0, -1}\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\t\tvisitado[atual.l][atual.c] = true\n\t\tif atual.l == finish.l && atual.c == finish.c {\n\t\t\tbreak\n\t\t}\n\t\tencontrou := false\n\t\tfor i := 0; i < 4; i++ {\n\t\t\tnl := atual.l + dl[i]\n\t\t\tnc := atual.c + dc[i]\n\t\t\tif nl < 0 || nl >= n || nc < 0 || nc >= m {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif matriz[nl][nc] != '#' && !visitado[nl][nc] {\n\t\t\t\tcaminho.Push(Post{l: nl, c: nc})\n\t\t\t\tencontrou = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t\tif !encontrou {\n\t\t\tbeco := caminho.Pop()\n\t\t\tbecos.Push(beco)\n\t\t}\n\t}\n\n\tfor !caminho.IsEmpty() {\n\t\tpos := caminho.Pop()\n\t\tmatriz[pos.l][pos.c] = '.'\n\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < m; j++ {\n\t\t\tfmt.Print(string(matriz[i][j]))\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "82"
+        }
+    ]
+}
