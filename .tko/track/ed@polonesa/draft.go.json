@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-13_12-05-33",
+            "content": "@@ -10,332 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22regexp%22%0A)%0A%0Atype Polonesa struct %7B%0A%09itens %5B%5Dstring%0A%7D%0A%0Afunc (p *Polonesa) PushBack(item string) %7B%0A%09p.itens = append(p.itens, item)%0A%7D%0A%0Afunc main() %7B%0A%09var n string%0A%0A%09p := Polonesa%7B%7D%0A%09fmt.Scan(&n)%0A%0A%09re := regexp.MustCompile(%60%5Cd+%60)%0A%09var polonesa %5B%5Dstring%0A%0A%09if open := re.MatchString(n); open %7B%0A%09%09p.PushBack(n)%0A%09%7D\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-13_12-28-46",
+            "content": "@@ -22,41 +22,21 @@\n (%0A%09%22\n-bufio%22%0A%09%22os%22%0A%09%22strings%22%0A%09%22unicode\n+fmt%22%0A%09%22regexp\n %22%0A)%0A\n@@ -166,531 +166,161 @@\n unc \n-(p *Polonesa) PopBack() string %7B%0A%09if len(p.itens) == 0 %7B%0A%09%09return %22%22%0A%09%7D%0A%09idc := len(p.itens) - 1%0A%09item := p.itens%5Bidc%5D%0A%09p.itens = p.itens%5B:idc%5D%0A%09return item%0A%7D%0A%0Afunc (p *Polonesa) Top() string %7B%0A%09if len(p.itens) == 0 %7B%0A%09%09return %22%22%0A%09%7D%0A%09return p.itens%5Blen(p.itens)-1%5D%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09n := scanner.Text()%0A%0A%09p := Polonesa%7B%7D%0A%09var exit %5B%5Dstring%0A%0A%09num := strings.Fields(n)%0A%0A%09for _, v := range num %7B%0A%09%09if unicode.IsDigit(rune(v%5B0%5D)) %7B%0A%09%09%09exit = append(exit, v)%0A%09%09%7D else\n+main() %7B%0A%09var n string%0A%0A%09p := Polonesa%7B%7D%0A%09fmt.Scan(&n)%0A%0A%09re := regexp.MustCompile(%60%5Cd+%60)%0A%09var polonesa %5B%5Dstring%0A%0A%09if open := re.MatchString(n); open\n  %7B%0A%09%09\n-%09\n p.Pu\n@@ -330,14 +330,10 @@\n ack(\n-v)%0A%09%09%7D\n+n)\n %0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-13_15-22-28",
+            "content": "@@ -709,314 +709,25 @@\n %0A%09%09%09\n-for len(p.itens) %3E 0 && acento(p.Top()) %3E= acento(v) %7B%0A%09%09%09%09top := p.PopBack()%0A%09%09%09%09exit = append(exit, top)%0A%09%09%09%7D%0A%09%09%09p.PushBack(v)%0A%09%09%7D%0A%09%7D%0A%0A%7D%0A%0Afunc acento(operador string) int %7B%0A%09if operador == %22+%22 %7C%7C operador == %22-%22 %7B%0A%09%09return 1%0A%09%7D else if operador == %22*%22 %7C%7C operador == %22/%22 %7B%0A%09%09return 2%0A%09%7D else %7B%0A%09%09return 3\n+p.PushBack(v)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-13_15-43-02",
+            "content": "@@ -29,15 +29,8 @@\n io%22%0A\n-%09%22fmt%22%0A\n %09%22os\n@@ -845,45 +845,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(strings.Join(exit, %22 %22))\n %0A%7D%0A%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-13_15-43-26",
+            "content": "@@ -849,73 +849,8 @@\n %09%09%7D%0A\n-%09%09for len(p.itens) %3E 0 %7B%0A%09%09%09exit = append(exit, p.PopBack())%0A%09%09%7D%0A\n %09%7D%0A%09\n@@ -886,17 +886,16 @@\n , %22 %22))%0A\n-%0A\n %7D%0A%0Afunc \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-13_15-44-31",
+            "content": "@@ -917,70 +917,8 @@\n %0A%09%7D%0A\n-%09for len(p.itens) %3E 0 %7B%0A%09%09exit = append(exit, p.PopBack())%0A%09%7D%0A\n %09fmt\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-13_15-44-44",
+            "content": "@@ -845,16 +845,81 @@\n (v)%0A%09%09%7D%0A\n+%09%09for len(p.itens) %3E 0 %7B%0A%09%09%09exit = append(exit, p.PopBack())%0A%09%09%7D%0A\n %09%7D%0A%09for \n@@ -1008,16 +1008,17 @@\n (exit, %22\n+ \n %22))%0A%0A%7D%0A%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-06-13_15-44-54",
+            "content": "@@ -943,17 +943,16 @@\n (exit, %22\n- \n %22))%0A%0A%7D%0A%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-06-13_15-45-54",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n\t\"unicode\"\n)\n\ntype Polonesa struct {\n\titens []string\n}\n\nfunc (p *Polonesa) PushBack(item string) {\n\tp.itens = append(p.itens, item)\n}\n\nfunc (p *Polonesa) PopBack() string {\n\tif len(p.itens) == 0 {\n\t\treturn \"\"\n\t}\n\tidc := len(p.itens) - 1\n\titem := p.itens[idc]\n\tp.itens = p.itens[:idc]\n\treturn item\n}\n\nfunc (p *Polonesa) Top() string {\n\tif len(p.itens) == 0 {\n\t\treturn \"\"\n\t}\n\treturn p.itens[len(p.itens)-1]\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tn := scanner.Text()\n\n\tp := Polonesa{}\n\tvar exit []string\n\n\tnum := strings.Fields(n)\n\n\tfor _, v := range num {\n\t\tif unicode.IsDigit(rune(v[0])) {\n\t\t\texit = append(exit, v)\n\t\t} else {\n\t\t\tfor len(p.itens) > 0 && acento(p.Top()) >= acento(v) {\n\t\t\t\ttop := p.PopBack()\n\t\t\t\texit = append(exit, top)\n\t\t\t}\n\t\t\tp.PushBack(v)\n\t\t}\n\t}\n\tfor len(p.itens) > 0 {\n\t\texit = append(exit, p.PopBack())\n\t}\n\tfmt.Println(strings.Join(exit, \" \"))\n\n}\n\nfunc acento(operador string) int {\n\tif operador == \"+\" || operador == \"-\" {\n\t\treturn 1\n\t} else if operador == \"*\" || operador == \"/\" {\n\t\treturn 2\n\t} else {\n\t\treturn 3\n\t}\n}\n",
+            "lines": "72"
+        }
+    ]
+}

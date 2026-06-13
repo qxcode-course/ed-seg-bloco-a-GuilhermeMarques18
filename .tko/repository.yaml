@@ -19,14 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
 - ed@linear
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   show_panel: 'true'
   task_graph_mode: time
   show_time: 'true'
 lang: go
-selected: ed@tree
-selected_index: 10
+selected: ed@polonesa
+selected_index: 14
