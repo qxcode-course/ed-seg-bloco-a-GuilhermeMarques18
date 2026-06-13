@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-12_22-32-39",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,32 +37,39 @@\n ) %7B%0A\n-%09var n int%0A%09fmt.Scan(&n)%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-12_23-03-44",
+            "content": "@@ -50,100 +50,21 @@\n int%0A\n-%0A%09var distancia %5B%5Dint%0A%09var caminho %5B%5Dint%0A%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D\n+%09fmt.Scan(&n)%0A\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-12_23-13-11",
+            "content": "@@ -25,224 +25,101 @@\n t%22%0A%0A\n-type Bomba struct %7B%0A%09gas, dis int%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%0A%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09cam := make(%5B%5DBomba, n)%0A%0A%09for i := range cam %7B%0A%09%09_, err := fmt.Scan(&cam%5Bi%5D.gas, &cam%5Bi%5D.dis)%0A%09%09if\n+func main() %7B%0A%09var n int%0A%0A%09var distancia %5B%5Dint%0A%09var caminho %5B%5Dint%0A%09if _, err := fmt.Scan(&n);\n  err\n@@ -134,20 +134,15 @@\n %7B%0A%09%09\n-%09\n return%0A\n-%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-06-12_23-49-24",
+            "content": "@@ -268,11 +268,10 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-12_23-50-24",
+            "content": "@@ -273,13 +273,6 @@\n %09%7D%0A%0A\n-saldo:%0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-13_11-42-25",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Aty\n@@ -62,57 +62,8 @@\n %0A%7D%0A%0A\n-func test(saldo int) bool %7B%0A%09return saldo %3E= 0%0A%7D%0A\n func\n@@ -273,277 +273,13 @@\n %09%7D%0A%0A\n-%09\n saldo\n- := 0%0A%09for _, bomba := range cam %7B%0A%09%09saldo += bomba.gas - bomba.dis%0A%09%7D%0A%0A%09if test(saldo) %7B%0A%09%09tanque := 0%0A%09%09pos := 0%0A%0A%09%09for i, bomba := range cam %7B%0A%09%09%09tanque += bomba.gas - bomba.dis%0A%0A%09%09%09if tanque %3C 0 %7B%0A%09%09%09%09pos = i + 1%0A%09%09%09%09tanque = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(pos)%0A%0A%09%7D%0A\n+:\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-13_12-04-23",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\ntype Bomba struct {\n\tgas, dis int\n}\n\nfunc test(saldo int) bool {\n\treturn saldo >= 0\n}\nfunc main() {\n\tvar n int\n\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n\tcam := make([]Bomba, n)\n\n\tfor i := range cam {\n\t\t_, err := fmt.Scan(&cam[i].gas, &cam[i].dis)\n\t\tif err != nil {\n\t\t\treturn\n\t\t}\n\t}\n\n\tsaldo := 0\n\tfor _, bomba := range cam {\n\t\tsaldo += bomba.gas - bomba.dis\n\t}\n\n\tif test(saldo) {\n\t\ttanque := 0\n\t\tpos := 0\n\n\t\tfor i, bomba := range cam {\n\t\t\ttanque += bomba.gas - bomba.dis\n\n\t\t\tif tanque < 0 {\n\t\t\t\tpos = i + 1\n\t\t\t\ttanque = 0\n\t\t\t}\n\t\t}\n\t\tfmt.Println(pos)\n\n\t}\n\n}\n",
+            "lines": "51"
+        }
+    ]
+}
