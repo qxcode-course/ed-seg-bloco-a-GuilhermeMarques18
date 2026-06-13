@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_01-23-43",
+            "content": "@@ -1,158 +1,137 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc balanceada(key string) bool %7B%0A%09var load %5B%5Drune%0A%0A%09chaveamento := map%5Brune%5Drune%7B%0A%09%09'(': ')',%0A%09%09'%7B': '%7D',%0A%09%09'%5B': '%5D',%0A%09%7D%0A%0A%7D%0A\n+@@ -6,17 +6,16 @@%0A ge main%250A%0A-%250A%0A import %2522%0A@@ -23,95 +23,53 @@%0A mt%2522%250A%0A-%250A%250Afunc balanceada(key string) string%257B%250A%250A%257D%250A\n func\n@@ -142,11 +142,17 @@\n n() \n-%7B%0A%09\n+%257B%250A   \n var \n@@ -163,10 +163,14 @@\n ring\n-%0A%09\n+%250A   \n fmt.\n@@ -181,8 +181,78 @@\n (&n)\n-%0A%0A%7D\n+%250A%250A%0A+func main() %257B%250A    fmt.Println(%2522Hello, World!%2522)%0A %250A%257D%250A\n %0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-12_21-47-00",
+            "content": "@@ -149,228 +149,8 @@\n %09%7D%0A%0A\n-%09for _, v := range key %7B%0A%09%09if v == '(' %7C%7C v == '%7B' %7C%7C v == '%5B' %7B%0A%09%09%09load = append(load, v)%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09if open, i := chaveamento%5Bv%5D; i %7B%0A%0A%09%09%09if len(chaveamento) == 0 %7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%0A            u%0A%0A%09%09%7D%0A%09%7D%0A\n %7D%0Afu\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-12_21-53-10",
+            "content": "@@ -347,138 +347,29 @@\n %09%7D%0A%0A\n-%09%09%09top := load%5Blen(load)-1%5D%0A%09%09%09load = load%5B:len(load)-1%5D%0A%0A%09%09%09if top != open %7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%7D%0A%09return len(load) == 0\n+            u%0A%0A%09%09%7D%0A%09%7D\n %0A%7D%0Af\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-12_21-55-39",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Afu\n@@ -523,100 +523,6 @@\n n)%0A%0A\n-%09if balanceada(n) %7B%0A%09%09fmt.Println(%22balanceada%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22nao balanceada%22)%0A%09%7D%0A%0A\n %7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-12_21-56-37",
+            "content": "@@ -574,12 +574,54 @@\n ada%22)%0A%09%7D\n+ else %7B%0A%09%09fmt.Println(%22nao balanceada%22)%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-12_22-04-07",
+            "content": "@@ -117,14 +117,14 @@\n %0A%09%09'\n-)\n+(\n ': '\n-(\n+)\n ',%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-12_22-07-03",
+            "content": "@@ -568,17 +568,17 @@\n alancead\n-o\n+a\n %22)%0A%09%7D%0A%0A%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-12_22-07-14",
+            "content": "@@ -578,50 +578,8 @@\n )%0A%09%7D\n- else %7B%0A%09%09fmt.Println(%22nao balanceado%22)%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-12_22-08-39",
+            "content": "@@ -129,21 +129,21 @@\n %0A%09%09'\n-%7D\n+%7B\n ': '\n-%7B\n+%7D\n ',%0A%09%09'\n-%5D\n+%5B\n ': '\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-12_22-13-32",
+            "content": "@@ -142,17 +142,17 @@\n %09%09'%5D': '\n-%5B\n+%5D\n ',%0A%09%7D%0A%0A%09\n@@ -610,16 +610,17 @@\n alancead\n+o\n %22)%0A%09%7D%0A%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-12_22-19-03",
+            "content": "@@ -606,22 +606,21 @@\n ao balancead\n-o\n %22)%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-12_22-24-25",
+            "content": "@@ -260,50 +260,8 @@\n %0A%09%09%7D\n-%0A%09%09if len(load) == 0 %7B%0A%09%09%09return false%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-12_22-27-16",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc balanceada(key string) bool {\n\tvar load []rune\n\n\tchaveamento := map[rune]rune{\n\t\t')': '(',\n\t\t'}': '{',\n\t\t']': '[',\n\t}\n\n\tfor _, v := range key {\n\t\tif v == '(' || v == '{' || v == '[' {\n\t\t\tload = append(load, v)\n\t\t\tcontinue\n\t\t}\n\t\tif len(load) == 0 {\n\t\t\treturn false\n\t\t}\n\n\t\tif open, i := chaveamento[v]; i {\n\n\t\t\tif len(chaveamento) == 0 {\n\t\t\t\treturn false\n\t\t\t}\n\n\t\t\ttop := load[len(load)-1]\n\t\t\tload = load[:len(load)-1]\n\n\t\t\tif top != open {\n\t\t\t\treturn false\n\t\t\t}\n\n\t\t}\n\t}\n\treturn len(load) == 0\n}\nfunc main() {\n\tvar n string\n\tfmt.Scan(&n)\n\n\tif balanceada(n) {\n\t\tfmt.Println(\"balanceado\")\n\t} else {\n\t\tfmt.Println(\"nao balanceado\")\n\t}\n\n}\n",
+            "lines": "52"
+        }
+    ]
+}
